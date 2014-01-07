@@ -1,0 +1,24 @@
+// Name:            Icon
+// Description:     Defines styles for icons
+//
+// Component:       jv-icon-*
+//
+// ========================================================================
+
+@icon-path:                                "../img";
+
+[class*='jv-icon-'] {
+    display: inline-block;
+    font-weight: normal;
+    font-style: normal;
+    background-image: url("@{icon-path}/icon-sprit.png");
+    background-repeat: no-repeat;
+}
+
+.jv-icon-close {
+    width: 16px;
+    height: 16px;
+    background-position: -10px -10px;
+}
+
+

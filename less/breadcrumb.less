@@ -1,0 +1,51 @@
+// Name:            Breadcrumb
+// Description:     Defines styles for a breadcrumb navigation
+//
+// Component:       uk-breadcrumb
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@breadcrumb-divider:                            "/";
+@breadcrumb-divider-margin:                     8px;
+
+/* ========================================================================
+   Component: Breadcrumb
+    ========================================================================== */
+
+.jv-breadcrumb {
+    padding: 0;
+    list-style: none;
+    letter-spacing: -0.31em;
+    .hook-breadcrumb;
+}
+
+.jv-breadcrumb > li { letter-spacing: normal; }
+
+.jv-breadcrumb > li,
+.jv-breadcrumb > li > a,
+.jv-breadcrumb > li > span { display: inline-block; }
+
+.jv-breadcrumb > li:before {
+    content: @breadcrumb-divider;
+    display: inline-block;
+    margin: 0 @breadcrumb-divider-margin;
+    vertical-align: top;
+    .hook-breadcrumb-divider;
+}
+
+.jv-breadcrumb > li:first-child:before {
+    content: '';
+    display: inline;
+    margin:0;
+}
+
+.hook-breadcrumb-misc;
+
+.hook-breadcrumb() {}
+.hook-breadcrumb-divider() {}
+.hook-breadcrumb-misc() {}
+

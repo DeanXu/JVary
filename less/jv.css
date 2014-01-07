@@ -1,0 +1,225 @@
+/* Reset 
+ ========================================================================== */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button,
+input,
+select {
+  vertical-align: middle;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  vertical-align: baseline;
+}
+/* ========================================================================
+   Component: Breadcrumb
+    ========================================================================== */
+.jv-breadcrumb {
+  padding: 0;
+  list-style: none;
+  letter-spacing: -0.31em;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+.jv-breadcrumb > li {
+  letter-spacing: normal;
+}
+.jv-breadcrumb > li,
+.jv-breadcrumb > li > a,
+.jv-breadcrumb > li > span {
+  display: inline-block;
+}
+.jv-breadcrumb > li:before {
+  content: "/";
+  display: inline-block;
+  margin: 0 8px;
+  vertical-align: top;
+}
+.jv-breadcrumb > li:first-child:before {
+  content: '';
+  display: inline;
+  margin: 0;
+}
+/* ========================================================================
+   Component: Button
+    ========================================================================== */
+.jv-button {
+  display: inline-block;
+  min-height: 30px;
+  padding: 0 30px;
+  border: none;
+  background: #969696;
+  line-height: 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+a.jv-button {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.jv-button:hover,
+.jv-button:focus {
+  background-color: #7b7b7b;
+  color: #ffffff;
+  outline: none;
+}
+.jv-button:active,
+.jv-button.jv-active {
+  background-color: #7b7b7b;
+  color: #ffffff;
+}
+/* Color modifiers
+ ========================================================================== */
+.jv-button-primary {
+  background: #eeab9a;
+  color: #ffffff;
+}
+.jv-button-primary:hover,
+.jv-button-primary:focus {
+  background-color: #e49e8c;
+  color: #ffffff;
+}
+.jv-button-primary:active,
+.jv-button-primary.uk-active {
+  background-color: #e49e8c;
+  color: #ffffff;
+}
+/* Size modifiers
+ ========================================================================== */
+.jv-button-small {
+  min-height: 25px;
+  padding: 0 20px;
+  line-height: 25px;
+  font-size: 12px;
+}
+/* Letter-Spacing modifiers
+ ========================================================================== */
+.jv-button-loose {
+  letter-spacing: 10px;
+}
+/*
+ * Behave like a block element and take the full width
+ */
+.jv-button-expand {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.jv-button-expend + .jv-button-expend {
+  margin-top: 10px;
+}
+[class*='jv-icon-'] {
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+  background-image: url("../img/icon-sprit.png");
+  background-repeat: no-repeat;
+}
+.jv-icon-close {
+  width: 16px;
+  height: 16px;
+  background-position: -10px -10px;
+}
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+}
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+  z-index: 1050;
+  background: #ffffff;
+}
+.modal-title {
+  font-size: 16px;
+  border-bottom: 1px solid #c1c1c1;
+  line-height: 38px;
+  padding: 0 20px;
+}
+.modal-dialog > .modal-close:first-child {
+  position: absolute;
+  right: 14px;
+  top: 11px;
+}
+.modal-content {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+/* Modifier: modal-dialog-frameless
+ ========================================================================== */
+.modal-dialog-frameless > h4 {
+  display: none;
+}
+.modal-dialog-frameless > .modal-close:first-child {
+  right: 9px;
+  top: 9px;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  background-color: #000000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+@media screen and (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+}

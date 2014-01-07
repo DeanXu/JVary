@@ -1,0 +1,116 @@
+// Name:            Modal
+// Description:     Defines styles for modal dialogs
+//
+// Component:       modal
+//
+// Sub-objects:     modal-dialog
+//                  modal-close
+//
+// Modifiers:       modal-dialog-frameless
+//
+// States:          modal-open (in <body> element)
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@modal-z-index:                                 1040;
+@modal-backdrop-background:                     #000;
+@modal-backdrop-opacity:                        0.3;
+
+@modal-dialog-width:                            600px;
+@modal-dialog-background:                       #fff;
+@modal-dialog-padding:                          20px;
+
+@modal-title-font-size:                         16px;
+
+
+
+.modal-open {
+    overflow: hidden;
+}
+.modal {
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @modal-z-index;
+}
+.modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+    z-index: @modal-z-index + 10;
+    background: @modal-dialog-background;
+}
+.modal-title {
+    font-size: @modal-title-font-size;
+    border-bottom: 1px solid #c1c1c1;
+    line-height: 38px;
+    padding: 0 @modal-dialog-padding;
+}
+.modal-dialog > .modal-close:first-child {
+    position: absolute;
+    right: 14px;
+    top: 11px;
+}
+.modal-content {
+    padding: @modal-dialog-padding;
+    .hook-modal-content;
+}
+
+/* Modifier: modal-dialog-frameless
+ ========================================================================== */
+
+.modal-dialog-frameless > h4 { display: none; }
+.modal-dialog-frameless > .modal-close:first-child {
+    right: 9px;
+    top: 9px;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @modal-z-index - 10;
+    background-color: @modal-backdrop-background;
+}
+.modal-backdrop.fade {
+    .opacity(0);
+}
+.modal-backdrop.in {
+    .opacity(@modal-backdrop-opacity);
+}
+@media screen and (min-width: 768px) {
+    .modal-dialog {
+        width: @modal-dialog-width;
+        margin: 30px auto;
+    }
+}
+
+.hook-modal-misc;
+
+.hook-modal-content() {}
+.hook-modal-misc() {}
+

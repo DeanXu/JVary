@@ -1,0 +1,147 @@
+// Name:            Button 
+// Description:     Defines styles for buttons
+//
+// Component:       jv-button
+//
+// Modifiers:       jv-button-primary
+//                  jv-button-small
+//                  jv-button-expand
+//
+// States:          jv-active
+//
+// ========================================================================
+
+// Variable
+// ========================================================================
+
+@button-height:                                 30px;
+@button-small-height:                           25px;
+
+@button-line-height:                            @button-height;
+@button-small-line-height:                      @button-small-height;
+
+@button-font-size:                              16px;
+@button-small-font-size:                        12px;
+
+@button-padding-horizontal:                     30px;
+@button-small-padding-horizontal:               20px;
+
+@button-background:                             #969696;
+@button-color:                                  #fff;
+@button-hover-background:                       #7b7b7b;
+@button-hover-color:                            #fff;
+@button-active-background:                      #7b7b7b;
+@button-active-color:                           #fff;
+
+@button-primary-background:                     #eeab9a;
+@button-primary-color:                          #fff;
+@button-primary-hover-background:               #e49e8c;
+@button-primary-hover-color:                    #fff;
+@button-primary-active-background:              #e49e8c;
+@button-primary-active-color:                   #fff;
+
+/* ========================================================================
+   Component: Button
+    ========================================================================== */
+
+.jv-button {
+    display: inline-block;
+    min-height: @button-height;
+    padding: 0 @button-padding-horizontal;
+    border: none;
+    background: @button-background;
+    line-height: @button-line-height;
+    border-radius: @global-border-radius;
+    font-size: @button-font-size;
+    color: @button-color;
+    letter-spacing: normal;
+    .hook-button;
+}
+
+a.jv-button {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.jv-button:hover,
+.jv-button:focus {
+    background-color: @button-hover-background;
+    color: @button-hover-color;
+    outline: none;
+    .hook-button-hover;
+}
+
+.jv-button:active,
+.jv-button.jv-active {
+    background-color: @button-active-background;
+    color: @button-active-color;
+    .hook-button-active;
+}
+
+/* Color modifiers
+ ========================================================================== */
+
+.jv-button-primary {
+    background: @button-primary-background;
+    color: @button-primary-color;
+    .hook-button-primary;
+}
+
+.jv-button-primary:hover,
+.jv-button-primary:focus {
+    background-color: @button-primary-hover-background;
+    color: @button-primary-hover-color;
+    .hook-button-primary-hover;
+}
+
+.jv-button-primary:active,
+.jv-button-primary.uk-active {
+    background-color: @button-primary-active-background;
+    color: @button-primary-active-color;
+    .hook-button-primary-active;
+}
+
+/* Size modifiers
+ ========================================================================== */
+
+.jv-button-small {
+    min-height: @button-small-height;
+    padding: 0 @button-small-padding-horizontal;
+    line-height: @button-small-line-height;
+    font-size: @button-small-font-size;
+}
+
+/* Letter-Spacing modifiers
+ ========================================================================== */
+
+.jv-button-loose {
+    letter-spacing: 10px;
+}
+
+/*
+ * Behave like a block element and take the full width
+ */
+
+.jv-button-expand {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.jv-button-expend + .jv-button-expend { margin-top: 10px; }
+
+// Hooks
+// ========================================================================
+
+.hook-button-misc;
+
+.hook-button() {}
+.hook-button-hover() {}
+.hook-button-active() {}
+.hook-button-primary() {}
+.hook-button-primary-hover() {}
+.hook-button-primary-active() {}
+.hook-button-misc() {}
+
