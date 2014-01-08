@@ -3,6 +3,29 @@
 //
 // ========================================================================
 
+// Variable
+// ========================================================================
+
+@base-body-color:                               #666;
+
+@base-link-color:                               #000;
+@base-link-hover-color:                         #000;
+
+
+/* ========================================================================
+   Component: Base
+    ========================================================================== */
+
+body {
+    color: @base-body-color;
+}
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+a { color: @base-link-color; }
+a:hover { color: @base-link-hover-color; }
+
 button,
 input,
 select { vertical-align: middle; }

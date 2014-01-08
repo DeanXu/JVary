@@ -25,6 +25,9 @@
 
 @modal-title-font-size:                         16px;
 
+@modal-footer-padding:                          20px 20px 50px;
+@modal-footer-button-align:                     center;
+@modal-footer-button-margin-horizontal:         20px;
 
 
 .modal-open {
@@ -78,13 +81,32 @@
     .hook-modal-content;
 }
 
+.modal-footer {
+    text-align: @modal-footer-button-align;
+    padding: @modal-footer-padding;
+}
+.modal-footer .jv-button + .jv-button {
+    margin-left: @modal-footer-button-margin-horizontal;
+}
+
 /* Modifier: modal-dialog-frameless
  ========================================================================== */
 
-.modal-dialog-frameless > h4 { display: none; }
 .modal-dialog-frameless > .modal-close:first-child {
     right: 9px;
     top: 9px;
+}
+
+/* Modifier: modal-dialog-confirm
+ ========================================================================== */
+.modal-dialog-confirm > .modal-close:first-child {
+    right: 9px;
+    top: 9px;
+}
+.modal-dialog-confirm > .modal-content{
+    text-align: center;
+    font-size: 16px;
+    padding: 60px 20px 20px;
 }
 
 .modal-backdrop {
@@ -106,6 +128,9 @@
     .modal-dialog {
         width: @modal-dialog-width;
         margin: 30px auto;
+    }
+    .modal-dialog-confirm {
+        width: @modal-dialog-width - 100;
     }
 }
 

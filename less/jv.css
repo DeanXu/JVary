@@ -18,6 +18,24 @@ input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
+/* ========================================================================
+   Component: Base
+    ========================================================================== */
+body {
+  color: #666666;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a {
+  color: #000000;
+}
+a:hover {
+  color: #000000;
+}
 button,
 input,
 select {
@@ -64,6 +82,7 @@ input[type="checkbox"] {
   min-height: 30px;
   padding: 0 30px;
   border: none;
+  text-align: center;
   background: #969696;
   line-height: 30px;
   border-radius: 4px;
@@ -110,12 +129,13 @@ a.jv-button {
   min-height: 25px;
   padding: 0 20px;
   line-height: 25px;
-  font-size: 12px;
+  font-size: 14px;
 }
-/* Letter-Spacing modifiers
- ========================================================================== */
-.jv-button-loose {
-  letter-spacing: 10px;
+.jv-button-mini {
+  min-height: 20px;
+  padding: 0 15px;
+  line-height: 20px;
+  font-size: 12px;
 }
 /*
  * Behave like a block element and take the full width
@@ -123,7 +143,6 @@ a.jv-button {
 .jv-button-expand {
   display: block;
   width: 100%;
-  text-align: center;
 }
 .jv-button-expend + .jv-button-expend {
   margin-top: 10px;
@@ -139,6 +158,21 @@ a.jv-button {
   width: 16px;
   height: 16px;
   background-position: -10px -10px;
+}
+.jv-icon-confirm-ask {
+  width: 40px;
+  height: 40px;
+  background-position: -258px -10px;
+}
+.jv-icon-confirm-success {
+  width: 40px;
+  height: 40px;
+  background-position: -305px -10px;
+}
+.jv-icon-confirm-error {
+  width: 40px;
+  height: 40px;
+  background-position: -352px -10px;
 }
 .modal-open {
   overflow: hidden;
@@ -191,14 +225,29 @@ a.jv-button {
   font-size: 14px;
   line-height: 1.8;
 }
+.modal-footer {
+  text-align: center;
+  padding: 20px 20px 50px;
+}
+.modal-footer .jv-button + .jv-button {
+  margin-left: 20px;
+}
 /* Modifier: modal-dialog-frameless
  ========================================================================== */
-.modal-dialog-frameless > h4 {
-  display: none;
-}
 .modal-dialog-frameless > .modal-close:first-child {
   right: 9px;
   top: 9px;
+}
+/* Modifier: modal-dialog-confirm
+ ========================================================================== */
+.modal-dialog-confirm > .modal-close:first-child {
+  right: 9px;
+  top: 9px;
+}
+.modal-dialog-confirm > .modal-content {
+  text-align: center;
+  font-size: 16px;
+  padding: 60px 20px 20px;
 }
 .modal-backdrop {
   position: fixed;
@@ -222,4 +271,15 @@ a.jv-button {
     width: 600px;
     margin: 30px auto;
   }
+  .modal-dialog-confirm {
+    width: 500px;
+  }
+}
+/* ========================================================================
+   Component: Text
+    ========================================================================== */
+/* Color modifiers
+ ========================================================================== */
+.jv-text-warning {
+  color: #c78676 !important;
 }

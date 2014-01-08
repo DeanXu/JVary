@@ -5,6 +5,7 @@
 //
 // Modifiers:       jv-button-primary
 //                  jv-button-small
+//                  jv-button-mini
 //                  jv-button-expand
 //
 // States:          jv-active
@@ -16,15 +17,19 @@
 
 @button-height:                                 30px;
 @button-small-height:                           25px;
+@button-mini-height:                            20px;
 
 @button-line-height:                            @button-height;
 @button-small-line-height:                      @button-small-height;
+@button-mini-line-height:                       @button-mini-height;
 
 @button-font-size:                              16px;
-@button-small-font-size:                        12px;
+@button-small-font-size:                        14px;
+@button-mini-font-size:                         12px;
 
 @button-padding-horizontal:                     30px;
 @button-small-padding-horizontal:               20px;
+@button-mini-padding-horizontal:                15px;
 
 @button-background:                             #969696;
 @button-color:                                  #fff;
@@ -49,6 +54,7 @@
     min-height: @button-height;
     padding: 0 @button-padding-horizontal;
     border: none;
+    text-align: center;
     background: @button-background;
     line-height: @button-line-height;
     border-radius: @global-border-radius;
@@ -112,12 +118,11 @@ a.jv-button {
     line-height: @button-small-line-height;
     font-size: @button-small-font-size;
 }
-
-/* Letter-Spacing modifiers
- ========================================================================== */
-
-.jv-button-loose {
-    letter-spacing: 10px;
+.jv-button-mini {
+    min-height: @button-mini-height;
+    padding: 0 @button-mini-padding-horizontal;
+    line-height: @button-mini-line-height;
+    font-size: @button-mini-font-size;
 }
 
 /*
@@ -127,7 +132,6 @@ a.jv-button {
 .jv-button-expand {
     display: block;
     width: 100%;
-    text-align: center;
 }
 
 .jv-button-expend + .jv-button-expend { margin-top: 10px; }
