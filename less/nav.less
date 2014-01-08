@@ -1,0 +1,93 @@
+// Name:            Nav
+// Description:     Defines styles for list navigations
+//
+// Component:       jv-nav
+//
+// Sub-objects:     jv-nav-header
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@nav-padding-vertical:                          5px;
+@nav-padding-horizontal:                        15px;
+
+@nav-header-padding-vertical:                   @nav-padding-vertical;
+@nav-header-padding-horizontal:                 @nav-padding-horizontal;
+@nav-header-font-size:                          14px;
+@nav-header-color:                              #faf0e6;
+@nav-header-background:                         #969696;
+@nav-header-font-weight:                        normal;
+@nav-header-margin-top:                         15px;
+
+@nav-side-color:                                #333;
+@nav-side-hover-background:                     #f4f3f0;
+@nav-side-hover-color:                          #333;
+@nav-side-active-background:                    #fff;
+@nav-side-active-color:                         #333;
+
+/* ========================================================================
+   Component: Nav
+    ========================================================================== */
+
+.jv-nav,
+.jv-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.jv-nav li > a {
+    display: block;
+    text-decoration: none;
+}
+
+.jv-nav > li > a { padding: @nav-padding-vertical @nav-padding-horizontal; }
+
+.jv-nav-header {
+    padding: @nav-header-padding-vertical @nav-header-padding-horizontal;
+    font-weight: @nav-header-font-weight;
+    font-size: @nav-header-font-size;
+    color: @nav-header-color;
+    background: @nav-header-background;
+    margin-top: @nav-header-margin-top;
+}
+
+.jv-nav-header:first-child { margin-top: 0; }
+
+/* Modifier `uk-nav-side`
+ ========================================================================== */
+
+/*
+ * Items
+ */
+
+.jv-nav-side > li > a {
+    color: @nav-side-color;
+    .hook-nav-side;
+}
+
+.jv-nav-side > li > a:hover,
+.jv-nav-side > li > a:focus {
+    background: @nav-side-hover-background;
+    color: @nav-side-hover-color;
+    outline: none;
+    .hook-nav-side-hover;
+}
+
+.jv-nav-side > li.jv-active > a {
+    background: @nav-side-active-background;
+    color: @nav-side-active-color;
+    .hook-nav-side-active;
+}
+
+
+.hook-nav-misc;
+
+.hook-nav-side() {}
+.hook-nav-side-hover() {}
+.hook-nav-side-active() {}
+.hook-nav-misc() {}
+
+

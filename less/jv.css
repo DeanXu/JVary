@@ -46,6 +46,51 @@ input[type="checkbox"] {
   vertical-align: baseline;
 }
 /* ========================================================================
+   Component: Nav
+    ========================================================================== */
+.jv-nav,
+.jv-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.jv-nav li > a {
+  display: block;
+  text-decoration: none;
+}
+.jv-nav > li > a {
+  padding: 5px 15px;
+}
+.jv-nav-header {
+  padding: 5px 15px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #faf0e6;
+  background: #969696;
+  margin-top: 15px;
+}
+.jv-nav-header:first-child {
+  margin-top: 0;
+}
+/* Modifier `uk-nav-side`
+ ========================================================================== */
+/*
+ * Items
+ */
+.jv-nav-side > li > a {
+  color: #333333;
+}
+.jv-nav-side > li > a:hover,
+.jv-nav-side > li > a:focus {
+  background: #f4f3f0;
+  color: #333333;
+  outline: none;
+}
+.jv-nav-side > li.jv-active > a {
+  background: #ffffff;
+  color: #333333;
+}
+/* ========================================================================
    Component: Breadcrumb
     ========================================================================== */
 .jv-breadcrumb {
@@ -73,6 +118,88 @@ input[type="checkbox"] {
   content: '';
   display: inline;
   margin: 0;
+}
+/* ========================================================================
+   Component: Tab
+ ========================================================================== */
+.jv-tab {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #bebebe;
+}
+.jv-tab:before,
+.jv-tab:after {
+  content: " ";
+  display: table;
+}
+.jv-tab:after {
+  clear: both;
+}
+.jv-tab > li {
+  margin-bottom: -1px;
+  float: left;
+}
+.jv-tab > li > a {
+  display: block;
+  padding: 8px 12px;
+  margin-left: 5px;
+  border: 1px solid transparent;
+  border-bottom-width: 0;
+  color: #333333;
+  text-decoration: none;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.jv-tab > li:first-child > a {
+  margin-left: 0;
+}
+.jv-tab > li > a:hover,
+.jv-tab > li > a:focus {
+  background: none;
+  color: inherit;
+  outline: none;
+}
+.jv-tab > li.jv-active > a {
+  background: #7b7b7b;
+  color: #ffffff;
+}
+.jv-switcher > li {
+  display: none;
+}
+.jv-switcher > .jv-active {
+  display: block;
+}
+/* ========================================================================
+   Component: Table
+ ========================================================================== */
+.jv-table {
+  width: 100%;
+  margin-bottom: 15px;
+}
+* + .jv-table {
+  margin-top: 15px;
+}
+.jv-table th,
+.jv-table td {
+  padding: 8px 8px;
+}
+.jv-table th {
+  text-align: left;
+}
+.jv-table td {
+  vertical-align: top;
+}
+.jv-table thead th {
+  vertical-align: bottom;
+}
+/* Modifier: `uk-table-striped`
+ ========================================================================== */
+.jv-table-dashed th {
+  background: #f7f5f2;
+}
+.jv-table-dashed tbody tr td {
+  border-bottom: 1px dashed #b5b5b5;
 }
 /* ========================================================================
    Component: Button
@@ -280,6 +407,9 @@ a.jv-button {
     ========================================================================== */
 /* Color modifiers
  ========================================================================== */
+.jv-text-muted {
+  color: #cccccc !important;
+}
 .jv-text-warning {
   color: #c78676 !important;
 }

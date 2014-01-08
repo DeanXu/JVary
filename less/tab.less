@@ -1,0 +1,77 @@
+// Name:            Tab
+// Description:     Defines styles for a tabbed navigation
+//
+// Component:       jv-tab
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@tab-border:                                    #bebebe;
+@tab-padding-horizontal:                        12px;
+@tab-padding-vertical:                          8px;
+@tab-color:                                     #333;
+
+@tab-hover-background:                          none;
+@tab-hover-color:                               inherit;
+
+@tab-active-background:                         #7b7b7b;
+@tab-active-color:                              #fff;
+
+
+/* ========================================================================
+   Component: Tab
+ ========================================================================== */
+
+.jv-tab {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid @tab-border;
+}
+
+.jv-tab:before,
+.jv-tab:after {
+    content: " ";
+    display: table;
+}
+
+.jv-tab:after { clear: both; }
+
+.jv-tab > li {
+    margin-bottom: -1px;
+    float: left;
+}
+
+.jv-tab > li > a {
+    display: block;
+    padding: @tab-padding-vertical @tab-padding-horizontal;
+    margin-left: 5px;
+    border: 1px solid transparent;
+    border-bottom-width: 0;
+    color: @tab-color;
+    text-decoration: none;
+    .hook-tab;
+}
+
+.jv-tab > li:first-child > a { margin-left: 0; }
+
+.jv-tab > li > a:hover,
+.jv-tab > li > a:focus {
+    background: @tab-hover-background;
+    color: @tab-hover-color;
+    outline: none;
+}
+
+.jv-tab > li.jv-active > a {
+    background: @tab-active-background;
+    color: @tab-active-color;
+}
+
+.hook-tab-misc;
+
+.hook-tab() {}
+.hook-tab-misc() {}
+

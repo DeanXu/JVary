@@ -1,0 +1,47 @@
+// Name:            Table
+// Description:     Defines styles for tables
+//
+// Component:       jv-table
+//
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@table-margin-vertical:                         15px;
+@table-padding-vertical:                        8px;
+@table-padding-horizontal:                      8px;
+
+@table-dashed-background:                       #f7f5f2;
+
+/* ========================================================================
+   Component: Table
+ ========================================================================== */
+
+.jv-table {
+    width: 100%;
+    margin-bottom: @table-margin-vertical;
+}
+
+* + .jv-table { margin-top: @table-margin-vertical; }
+
+.jv-table th,
+.jv-table td {
+    padding: @table-padding-vertical @table-padding-horizontal;
+}
+
+.jv-table th { text-align: left; }
+.jv-table td { vertical-align: top; }
+
+.jv-table thead th { vertical-align: bottom; }
+
+
+/* Modifier: `uk-table-striped`
+ ========================================================================== */
+
+.jv-table-dashed th { background: @table-dashed-background; }
+
+.jv-table-dashed tbody tr td { border-bottom: 1px dashed #b5b5b5;}
+
