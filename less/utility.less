@@ -7,13 +7,22 @@
 
 // Variables
 // ========================================================================
-
+@utility-container-width:                       980px;
+@utility-container-padding-horizontal:          25px;
 
 
 
 /* ========================================================================
    Component: Utility
  ========================================================================== */
+
+.jv-container {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: @utility-container-width;
+    padding: 0 @utility-container-padding-horizontal;
+    margin: 0 auto;
+}
 
 .jv-float-left { float: left; }
 .jv-float-right { float: right; }

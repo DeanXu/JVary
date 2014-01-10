@@ -239,15 +239,28 @@ h6,
 .jv-nav-side > li > a {
   color: #333333;
 }
+.jv-nav-side > li > a .jv-icon-right-arrow {
+  display: none;
+  float: right;
+  margin-top: 4px;
+  margin-right: 10px;
+}
 .jv-nav-side > li > a:hover,
 .jv-nav-side > li > a:focus {
   background: #f4f3f0;
   color: #333333;
   outline: none;
 }
+.jv-nav-side > li > a:hover .jv-icon-right-arrow,
+.jv-nav-side > li > a:focus .jv-icon-right-arrow {
+  display: inline-block;
+}
 .jv-nav-side > li.jv-active > a {
   background: #ffffff;
   color: #333333;
+}
+.jv-nav-side > li.jv-active > a .jv-icon-right-arrow {
+  display: inline-block;
 }
 /* ========================================================================
    Component: Breadcrumb
@@ -480,6 +493,11 @@ a.jv-button {
   width: 29px;
   height: 24px;
 }
+.jv-icon-right-arrow {
+  background-position: -10px -35px;
+  width: 7px;
+  height: 11px;
+}
 .jv-icon-small {
   vertical-align: -25%;
 }
@@ -604,6 +622,13 @@ a.jv-button {
 /* ========================================================================
    Component: Utility
  ========================================================================== */
+.jv-container {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 980px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
 .jv-float-left {
   float: left;
 }
