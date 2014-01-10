@@ -65,7 +65,7 @@
 .modal-dialog {
     position: relative;
     width: @modal-dialog-width;
-    margin: 10px;
+    margin: 30px auto;
     z-index: @modal-z-index + 10;
     background: @modal-dialog-background;
 }
@@ -119,6 +119,7 @@
  ========================================================================== */
 .modal-dialog-large { width: @modal-dialog-large-width; }
 
+
 .modal-backdrop {
     position: fixed;
     top: 0;
@@ -135,15 +136,9 @@
     .opacity(@modal-backdrop-opacity);
 }
 @media screen and (max-width: 768px) {
-    .modal-dialog, {
+    .modal-dialog {
         width: auto;
-        margin: 30px auto;
-    }
-    .modal-dialog-small {
-        width: @modal-dialog-small-width;
-    }
-    .modal-dialog-large {
-        width: @modal-dialog-large-width;
+        margin: 10px;
     }
 }
 
