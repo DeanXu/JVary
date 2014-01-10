@@ -480,6 +480,9 @@ a.jv-button {
   width: 29px;
   height: 24px;
 }
+.jv-icon-small {
+  vertical-align: -25%;
+}
 .modal-open {
   overflow: hidden;
 }
@@ -525,6 +528,7 @@ a.jv-button {
   position: absolute;
   right: 14px;
   top: 11px;
+  z-index: 1;
 }
 .modal-content {
   padding: 20px;
@@ -544,13 +548,13 @@ a.jv-button {
   right: 9px;
   top: 9px;
 }
-/* Modifier: modal-dialog-confirm
+/* Modifier: modal-dialog-small
  ========================================================================== */
-.modal-dialog-confirm > .modal-close:first-child {
+.modal-dialog-small > .modal-close:first-child {
   right: 9px;
   top: 9px;
 }
-.modal-dialog-confirm > .modal-content {
+.modal-dialog-small > .modal-content {
   text-align: center;
   font-size: 16px;
   padding: 60px 20px 20px;
@@ -577,8 +581,11 @@ a.jv-button {
     width: 600px;
     margin: 30px auto;
   }
-  .modal-dialog-confirm {
+  .modal-dialog-small {
     width: 500px;
+  }
+  .modal-dialog-large {
+    width: 980px;
   }
 }
 /* ========================================================================

@@ -7,6 +7,7 @@
 //                  modal-close
 //
 // Modifiers:       modal-dialog-frameless
+//                  modal-dialog-small
 //
 // States:          modal-open (in <body> element)
 //
@@ -22,6 +23,9 @@
 @modal-dialog-width:                            600px;
 @modal-dialog-background:                       #fff;
 @modal-dialog-padding:                          20px;
+
+@modal-dialog-small-width:                      @modal-dialog-width - 100;  
+@modal-dialog-large-width:                      980px;
 
 @modal-title-font-size:                         16px;
 
@@ -60,7 +64,7 @@
 }
 .modal-dialog {
     position: relative;
-    width: auto;
+    width: @modal-dialog-width;
     margin: 10px;
     z-index: @modal-z-index + 10;
     background: @modal-dialog-background;
@@ -75,6 +79,7 @@
     position: absolute;
     right: 14px;
     top: 11px;
+    z-index: 1;
 }
 .modal-content {
     padding: @modal-dialog-padding;
@@ -97,17 +102,22 @@
     top: 9px;
 }
 
-/* Modifier: modal-dialog-confirm
+/* Modifier: modal-dialog-small
  ========================================================================== */
-.modal-dialog-confirm > .modal-close:first-child {
+.modal-dialog-small { width: @modal-dialog-small-width; }
+.modal-dialog-small > .modal-close:first-child {
     right: 9px;
     top: 9px;
 }
-.modal-dialog-confirm > .modal-content{
+.modal-dialog-small > .modal-content{
     text-align: center;
     font-size: 16px;
     padding: 60px 20px 20px;
 }
+
+/* Modifier: modal-dialog-large
+ ========================================================================== */
+.modal-dialog-large { width: @modal-dialog-large-width; }
 
 .modal-backdrop {
     position: fixed;
@@ -124,13 +134,16 @@
 .modal-backdrop.in {
     .opacity(@modal-backdrop-opacity);
 }
-@media screen and (min-width: 768px) {
-    .modal-dialog {
-        width: @modal-dialog-width;
+@media screen and (max-width: 768px) {
+    .modal-dialog, {
+        width: auto;
         margin: 30px auto;
     }
-    .modal-dialog-confirm {
-        width: @modal-dialog-width - 100;
+    .modal-dialog-small {
+        width: @modal-dialog-small-width;
+    }
+    .modal-dialog-large {
+        width: @modal-dialog-large-width;
     }
 }
 
