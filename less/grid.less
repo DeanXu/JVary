@@ -1,0 +1,81 @@
+// Name:            Grid
+// Description:     Provides a responsive, fluid and nestable grid
+//
+// Component:       `jv-grid`
+//
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@grid-gutter-horizontal:                        25px;
+@grid-gutter-vertical:                          25px;
+
+
+/* ========================================================================
+   Component: Grid
+ ========================================================================== */
+
+.jv-grid:before,
+.jv-grid:after {
+    content: " ";
+    display: table;
+}
+
+.jv-grid:after { clear: both; }
+
+.jv-grid {
+    margin: 0 0 0 -@grid-gutter-horizontal;
+    padding: 0;
+    list-style: none;
+}
+
+.jv-grid + .jv-grid { margin-top: @grid-gutter-vertical; }
+
+.jv-grid > [class*='jv-width-'] {
+    margin: 0;
+    padding-left: @grid-gutter-horizontal;
+    float: left;
+}
+
+[class*='jv-width-'] {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.jv-width-1-1 { width: 100%; }
+
+.jv-width-1-2,
+.jv-width-2-4,
+.jv-width-3-6,
+.jv-width-5-10 { width: 50%; }
+
+.jv-width-1-3,
+.jv-width-2-6 { width: 33.333%; }
+.jv-width-2-3,
+.jv-width-4-6 { width: 66.666%; }
+
+.jv-width-1-4 { width: 25%; }
+.jv-width-3-4 { width: 75%; }
+
+.jv-width-1-5,
+.jv-width-2-10 { width: 20%; }
+.jv-width-2-5,
+.jv-width-4-10 { width: 40%; }
+.jv-width-3-5,
+.jv-width-6-10 { width: 60%; }
+.jv-width-4-5,
+.jv-width-8-10 { width: 80%; }
+
+.jv-width-1-6 { width: 16.666%; }
+.jv-width-5-6 { width: 83.333%; }
+
+.jv-width-1-10 { width: 10%; }
+.jv-width-3-10 { width: 30%; }
+.jv-width-7-10 { width: 70%; }
+.jv-width-9-10 { width: 90%; }
+
+

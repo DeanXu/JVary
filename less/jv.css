@@ -45,6 +45,114 @@ input[type="radio"],
 input[type="checkbox"] {
   vertical-align: baseline;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 15px 0;
+  font-weight: normal;
+}
+h1,
+.jv-h1 {
+  font-size: 36px;
+  line-height: 42px;
+}
+h2,
+.jv-h2 {
+  font-size: 24px;
+  line-height: 30px;
+}
+h3,
+.jv-h3 {
+  font-size: 18px;
+  line-height: 24px;
+}
+h4,
+.jv-h4 {
+  font-size: 16px;
+  line-height: 22px;
+}
+h5,
+.jv-h5 {
+  font-size: 14px;
+  line-height: 20px;
+}
+h6,
+.jv-h6 {
+  font-size: 12px;
+  line-height: 18px;
+}
+/* ========================================================================
+   Component: Grid
+ ========================================================================== */
+.jv-grid:before,
+.jv-grid:after {
+  content: " ";
+  display: table;
+}
+.jv-grid:after {
+  clear: both;
+}
+.jv-grid {
+  margin: 0 0 0 -25px;
+  padding: 0;
+  list-style: none;
+}
+.jv-grid + .jv-grid {
+  margin-top: 25px;
+}
+.jv-grid > [class*='jv-width-'] {
+  margin: 0;
+  padding-left: 25px;
+  float: left;
+}
+[class*='jv-width-'] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+.jv-width-1-2,
+.jv-width-2-4,
+.jv-width-3-6,
+.jv-width-5-10 {
+  width: 50%;
+}
+/* ========================================================================
+   Component: Panel
+ ========================================================================= */
+.jv-panel {
+  padding: 15px;
+  line-height: 1.8em;
+}
+.jv-panel:before,
+.jv-panel:after {
+  content: " ";
+  display: table;
+}
+.jv-panel:after {
+  clear: both;
+}
+/* Sub-object: `uk-panel-title`
+ ========================================================================== */
+.jv-panel-title {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #c78676;
+}
+/* Modifier: Color and Background
+ ========================================================================== */
+.jv-panel-primary {
+  color: #666666;
+  background: #f9f9f7;
+}
+/* Modifier: jv-panel-border
+ ========================================================================== */
+.jv-panel-border {
+  border: 1px solid #bebebe;
+}
 /* ========================================================================
    Component: Nav
     ========================================================================== */
@@ -72,7 +180,7 @@ input[type="checkbox"] {
 .jv-nav-header:first-child {
   margin-top: 0;
 }
-/* Modifier `uk-nav-side`
+/* Modifier jv-nav-side
  ========================================================================== */
 /*
  * Items
@@ -142,7 +250,7 @@ input[type="checkbox"] {
 }
 .jv-tab > li > a {
   display: block;
-  padding: 8px 12px;
+  padding: 6px 20px;
   margin-left: 5px;
   border: 1px solid transparent;
   border-bottom-width: 0;
@@ -193,7 +301,7 @@ input[type="checkbox"] {
 .jv-table thead th {
   vertical-align: bottom;
 }
-/* Modifier: `uk-table-striped`
+/* Modifier: jv-table-striped
  ========================================================================== */
 .jv-table-dashed th {
   background: #f7f5f2;
@@ -278,7 +386,7 @@ a.jv-button {
   display: inline-block;
   font-weight: normal;
   font-style: normal;
-  background-image: url("../img/icon-sprit.png");
+  background-image: url("/resources/jv/img/icon-sprit.png");
   background-repeat: no-repeat;
 }
 .jv-icon-close {
@@ -300,6 +408,21 @@ a.jv-button {
   width: 40px;
   height: 40px;
   background-position: -352px -10px;
+}
+.jv-icon-story {
+  background-position: -362px -310px;
+  width: 26px;
+  height: 19px;
+}
+.jv-icon-online {
+  background-position: -363px -370px;
+  width: 26px;
+  height: 19px;
+}
+.jv-icon-cart {
+  background-position: -363px -337px;
+  width: 29px;
+  height: 24px;
 }
 .modal-open {
   overflow: hidden;
@@ -412,4 +535,16 @@ a.jv-button {
 }
 .jv-text-warning {
   color: #c78676 !important;
+}
+/* ========================================================================
+   Component: Utility
+ ========================================================================== */
+.jv-float-left {
+  float: left;
+}
+.jv-float-right {
+  float: right;
+}
+[class*='jv-float-'] {
+  max-width: 100%;
 }

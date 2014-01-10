@@ -1,0 +1,81 @@
+// Name:            Panel
+// Description:     Defines styles for reusable content areas
+//
+// Sub-objects:     jv-panel-title
+//
+//
+// Component:       jv-panel
+//
+// Modifiers:       jv-panel-border
+//                  jv-panel-primay
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@panel-padding:                                 15px;
+@panel-line-height:                             1.8em;
+
+@panel-title-margin-bottom:                     5px;
+@panel-title-font-size:                         14px;
+@panel-title-font-weight:                       normal;
+@panel-title-color:                             #c78676;
+
+@panel-primary-background:                      #f9f9f7;
+@panel-primay-color:                            #666;
+
+@panel-border-color:                            #bebebe;
+
+
+
+/* ========================================================================
+   Component: Panel
+ ========================================================================= */
+
+.jv-panel { 
+    padding: @panel-padding;
+    line-height: @panel-line-height;
+}
+
+.jv-panel:before,
+.jv-panel:after {
+    content: " ";
+    display: table;
+}
+
+.jv-panel:after { clear: both; }
+
+.jv-panel-title {
+    
+}
+
+/* Sub-object: `uk-panel-title`
+ ========================================================================== */
+
+.jv-panel-title {
+    margin-bottom: @panel-title-margin-bottom;
+    font-size: @panel-title-font-size;
+    font-weight: @panel-title-font-weight;
+    color: @panel-title-color;
+}
+
+
+/* Modifier: Color and Background
+ ========================================================================== */
+
+.jv-panel-primary {
+    color: @panel-primay-color;
+    background: @panel-primary-background;
+}
+
+
+/* Modifier: jv-panel-border
+ ========================================================================== */
+
+.jv-panel-border {
+    border: 1px solid @panel-border-color;
+}
+
+
+
