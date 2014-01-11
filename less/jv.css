@@ -20,7 +20,7 @@ input[type="submit"] {
 }
 /* ========================================================================
    Component: Base
-    ========================================================================== */
+ ========================================================================== */
 body {
   color: #666666;
 }
@@ -44,45 +44,6 @@ select {
 input[type="radio"],
 input[type="checkbox"] {
   vertical-align: baseline;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 15px 0;
-  font-weight: normal;
-}
-h1,
-.jv-h1 {
-  font-size: 24px;
-  line-height: 30px;
-}
-h2,
-.jv-h2 {
-  font-size: 18px;
-  line-height: 24px;
-}
-h3,
-.jv-h3 {
-  font-size: 16px;
-  line-height: 22px;
-}
-h4,
-.jv-h4 {
-  font-size: 14px;
-  line-height: 20px;
-}
-h5,
-.jv-h5 {
-  font-size: 12px;
-  line-height: 18px;
-}
-h6,
-.jv-h6 {
-  font-size: 12px;
-  line-height: 18px;
 }
 /* ========================================================================
    Component: Grid
@@ -298,7 +259,7 @@ h6,
   margin: 0;
   padding: 0;
   list-style: none;
-  border-bottom: 1px solid #bebebe;
+  border-bottom: 1px solid #d1cfc9;
 }
 .jv-tab:before,
 .jv-tab:after {
@@ -333,13 +294,14 @@ h6,
   outline: none;
 }
 .jv-tab > li.jv-active > a {
-  background: #7b7b7b;
+  background: #b8b5af;
   color: #ffffff;
 }
 /* Modifier: jv-tab-grid
  ========================================================================== */
 .jv-tab-grid > li > a {
   text-align: center;
+  border-radius: 0px;
 }
 .jv-switcher > li {
   display: none;
@@ -377,6 +339,52 @@ h6,
 }
 .jv-table-dashed tbody tr td {
   border-bottom: 1px dashed #b5b5b5;
+}
+/* ========================================================================
+   Component: Heading
+ ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 15px 0;
+  font-weight: normal;
+}
+h1,
+.jv-h1 {
+  font-size: 24px;
+  line-height: 30px;
+}
+h2,
+.jv-h2 {
+  font-size: 18px;
+  line-height: 24px;
+}
+h3,
+.jv-h3 {
+  font-size: 16px;
+  line-height: 22px;
+}
+h4,
+.jv-h4 {
+  font-size: 14px;
+  line-height: 20px;
+}
+h5,
+.jv-h5 {
+  font-size: 12px;
+  line-height: 18px;
+}
+h6,
+.jv-h6 {
+  font-size: 12px;
+  line-height: 18px;
+}
+.jv-heading-primary {
+  border-bottom: 2px solid #545454;
+  line-height: 2em;
 }
 /* ========================================================================
    Component: Button

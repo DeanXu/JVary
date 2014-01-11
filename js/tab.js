@@ -4,7 +4,7 @@
 //
 // ========================================================================
 
-;(function($) {
++(function($) {
     if($(".jv-tab").size() > 0) {
         $(".jv-tab").each(function(i,v) {
             var swiObj = $($(this).data("jv-connect"));
@@ -19,4 +19,3 @@
         });
     }
 })(jQuery);
-

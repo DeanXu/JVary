@@ -11,7 +11,7 @@
 // Variables
 // ========================================================================
 
-@tab-border:                                    #bebebe;
+@tab-border-color:                              #d1cfc9;
 @tab-padding-horizontal:                        20px;
 @tab-padding-vertical:                          6px;
 @tab-color:                                     #333;
@@ -19,7 +19,7 @@
 @tab-hover-background:                          none;
 @tab-hover-color:                               inherit;
 
-@tab-active-background:                         #7b7b7b;
+@tab-active-background:                         #b8b5af;
 @tab-active-color:                              #fff;
 
 
@@ -31,7 +31,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    border-bottom: 1px solid @tab-border;
+    border-bottom: 1px solid @tab-border-color;
 }
 
 .jv-tab:before,
@@ -77,10 +77,12 @@
 
 .jv-tab-grid > li > a {
     text-align: center;
+    .hook-tab-grid;
 }
 
 .hook-tab-misc;
 
 .hook-tab() {}
+.hook-tab-grid() {}
 .hook-tab-misc() {}
 

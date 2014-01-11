@@ -1,0 +1,84 @@
+// Name:            Heading 
+// Description:     Defines styles for h1 to h6
+//
+// Component:       jv-heading
+//
+// Modifiers:       jv-heading-primary
+//
+//
+//
+//
+//
+// ========================================================================
+
+
+// Variable
+// ========================================================================
+
+@heading-margin-vertical:                          15px;
+
+@heading-font-weight:                              normal;
+@heading-h1-font-size:                             24px;
+@heading-h1-line-height:                           30px;
+@heading-h2-font-size:                             18px;
+@heading-h2-line-height:                           24px;
+@heading-h3-font-size:                             16px;
+@heading-h3-line-height:                           22px;
+@heading-h4-font-size:                             14px;
+@heading-h4-line-height:                           20px;
+@heading-h5-font-size:                             12px;
+@heading-h5-line-height:                           18px;
+@heading-h6-font-size:                             12px;
+@heading-h6-line-height:                           18px;
+
+@heading-primary-border-width:                     2px;
+@heading-primary-border-color:                     #545454;
+@heading-primary-line-height:                      2em;
+
+
+/* ========================================================================
+   Component: Heading
+ ========================================================================== */
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 @heading-margin-vertical 0;
+    font-weight: @heading-font-weight;
+}
+
+h1, .jv-h1 {
+    font-size: @heading-h1-font-size;
+    line-height: @heading-h1-line-height;
+}
+
+h2, .jv-h2 {
+    font-size: @heading-h2-font-size;
+    line-height: @heading-h2-line-height;
+}
+
+h3, .jv-h3 {
+    font-size: @heading-h3-font-size;
+    line-height: @heading-h3-line-height;
+}
+
+h4, .jv-h4 {
+    font-size: @heading-h4-font-size;
+    line-height: @heading-h4-line-height;
+}
+
+h5, .jv-h5 {
+    font-size: @heading-h5-font-size;
+    line-height: @heading-h5-line-height;
+}
+
+h6, .jv-h6 {
+    font-size: @heading-h6-font-size;
+    line-height: @heading-h6-line-height;
+}
+
+.jv-heading-primary {
+    border-bottom: @heading-primary-border-width solid @heading-primary-border-color;
+    line-height: @heading-primary-line-height;
+}
+
+
