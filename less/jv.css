@@ -56,28 +56,28 @@ h6 {
 }
 h1,
 .jv-h1 {
-  font-size: 36px;
-  line-height: 42px;
-}
-h2,
-.jv-h2 {
   font-size: 24px;
   line-height: 30px;
 }
-h3,
-.jv-h3 {
+h2,
+.jv-h2 {
   font-size: 18px;
   line-height: 24px;
 }
-h4,
-.jv-h4 {
+h3,
+.jv-h3 {
   font-size: 16px;
   line-height: 22px;
 }
-h5,
-.jv-h5 {
+h4,
+.jv-h4 {
   font-size: 14px;
   line-height: 20px;
+}
+h5,
+.jv-h5 {
+  font-size: 12px;
+  line-height: 18px;
 }
 h6,
 .jv-h6 {
@@ -176,6 +176,7 @@ h6,
 .jv-panel {
   padding: 15px;
   line-height: 1.8em;
+  background: #ffffff;
 }
 .jv-panel:before,
 .jv-panel:after {
@@ -243,7 +244,6 @@ h6,
   display: none;
   float: right;
   margin-top: 4px;
-  margin-right: 10px;
 }
 .jv-nav-side > li > a:hover,
 .jv-nav-side > li > a:focus {
