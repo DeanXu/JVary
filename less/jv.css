@@ -526,8 +526,61 @@ a.jv-button {
   width: 7px;
   height: 11px;
 }
+.jv-icon-good {
+  width: 24px;
+  height: 24px;
+  background-position: -35px -9px;
+}
+.jv-icon-diamond {
+  width: 24px;
+  height: 24px;
+  background-position: -35px -42px;
+}
+.jv-icon-mobile {
+  width: 24px;
+  height: 24px;
+  background-position: -35px -76px;
+}
+.jv-icon-email {
+  width: 24px;
+  height: 24px;
+  background-position: -35px -110px;
+}
+.jv-icon-lock {
+  width: 24px;
+  height: 24px;
+  background-position: -35px -144px;
+}
+.jv-icon-home {
+  width: 24px;
+  height: 24px;
+  background-position: -35px -178px;
+}
+.jv-icon-user {
+  width: 24px;
+  height: 24px;
+  background-position: -35px -212px;
+}
+.jv-icon-calendar {
+  width: 24px;
+  height: 24px;
+  background-position: -35px -245px;
+}
+.jv-icon-card {
+  width: 24px;
+  height: 24px;
+  background-position: -35px -279px;
+}
+.jv-icon-heart {
+  width: 24px;
+  height: 24px;
+  background-position: -35px -313px;
+}
 .jv-icon-small {
   vertical-align: -25%;
+}
+.jv-icon-big {
+  vertical-align: -15%;
 }
 .modal-open {
   overflow: hidden;
