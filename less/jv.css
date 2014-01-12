@@ -186,7 +186,7 @@ input[type="checkbox"] {
   padding: 5px 15px;
   font-weight: normal;
   font-size: 14px;
-  color: #faf0e6;
+  color: #ffffff;
   background: #969696;
   margin-top: 15px;
 }
@@ -198,30 +198,53 @@ input[type="checkbox"] {
 /*
  * Items
  */
-.jv-nav-side > li > a {
-  color: #333333;
+.jv-nav-side {
+  background: #f1efea;
 }
-.jv-nav-side > li > a .jv-icon-right-arrow {
-  display: none;
-  float: right;
-  margin-top: 4px;
+.jv-nav-side > li > a {
+  min-height: 20px;
+  line-height: 20px;
+  color: #333333;
+  margin-top: 5px;
 }
 .jv-nav-side > li > a:hover,
 .jv-nav-side > li > a:focus {
-  background: #f4f3f0;
+  background: #f8f7f5;
   color: #333333;
   outline: none;
 }
-.jv-nav-side > li > a:hover .jv-icon-right-arrow,
-.jv-nav-side > li > a:focus .jv-icon-right-arrow {
-  display: inline-block;
+.jv-nav-side > li > a:hover:after,
+.jv-nav-side > li > a:focus:after {
+  content: '';
+  background-image: url("/resources/jv/img/icon-sprit.png");
+  background-repeat: no-repeat;
+  background-position: -10px -35px;
+  width: 7px;
+  height: 11px;
+  float: right;
+  margin-top: 5px;
+  margin-left: -10px;
 }
 .jv-nav-side > li.jv-active > a {
   background: #ffffff;
   color: #333333;
 }
-.jv-nav-side > li.jv-active > a .jv-icon-right-arrow {
-  display: inline-block;
+.jv-nav-side > li.jv-active > a:after {
+  content: '';
+  background-image: url("/resources/jv/img/icon-sprit.png");
+  background-repeat: no-repeat;
+  background-position: -10px -35px;
+  width: 7px;
+  height: 11px;
+  float: right;
+  margin-top: 5px;
+  margin-left: -10px;
+}
+.jv-nav-side {
+  padding-bottom: 15px;
+}
+.jv-nav-side li {
+  text-align: center;
 }
 /* ========================================================================
    Component: Breadcrumb
@@ -230,7 +253,6 @@ input[type="checkbox"] {
   padding: 0;
   list-style: none;
   letter-spacing: -0.31em;
-  padding-top: 15px;
   padding-bottom: 20px;
 }
 .jv-breadcrumb > li {
@@ -349,7 +371,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 15px 0;
+  margin: 0 0 10px 0;
   font-weight: normal;
 }
 h1,
@@ -461,8 +483,6 @@ a.jv-button {
 }
 [class*='jv-icon-'] {
   display: inline-block;
-  font-weight: normal;
-  font-style: normal;
   background-image: url("/resources/jv/img/icon-sprit.png");
   background-repeat: no-repeat;
 }
@@ -567,12 +587,6 @@ a.jv-button {
 }
 .modal-footer .jv-button + .jv-button {
   margin-left: 20px;
-}
-/* Modifier: modal-dialog-frameless
- ========================================================================== */
-.modal-dialog-frameless > .modal-close:first-child {
-  right: 9px;
-  top: 9px;
 }
 /* Modifier: modal-dialog-small
  ========================================================================== */

@@ -4,7 +4,6 @@
 // ========================================================================
 
 .hook-breadcrumb() {
-    padding-top: 15px;
     padding-bottom: 20px;
 }
 .hook-modal-content() {
@@ -24,16 +23,36 @@
     .jv-switcher > .jv-active { display: block; }
 }
 .hook-nav-side() {
-    .jv-icon-right-arrow { 
-        display: none; 
-        float: right;
-        margin-top: 4px;
-    }
+    margin-top: 5px;
 }
 .hook-nav-side-hover() {
-    .jv-icon-right-arrow { display: inline-block; }
+    &:after {
+        content: '';
+        background-image: url("@{icon-path}/icon-sprit.png");
+        background-repeat: no-repeat;
+        .jv-icon-right-arrow;
+        float: right;
+        margin-top: 5px;
+        margin-left: -10px;
+    }
 }
 .hook-nav-side-active() {
-    .jv-icon-right-arrow { display: inline-block; }
+    &:after {
+        content: '';
+        background-image: url("@{icon-path}/icon-sprit.png");
+        background-repeat: no-repeat;
+        .jv-icon-right-arrow;
+        float: right;
+        margin-top: 5px;
+        margin-left: -10px;
+    }
+}
+.hook-nav-misc() {
+    .jv-nav-side {
+        padding-bottom: 15px;
+    }
+    .jv-nav-side li {
+        text-align: center;
+    }
 }
 

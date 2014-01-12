@@ -16,13 +16,16 @@
 @nav-header-padding-vertical:                   @nav-padding-vertical;
 @nav-header-padding-horizontal:                 @nav-padding-horizontal;
 @nav-header-font-size:                          14px;
-@nav-header-color:                              #faf0e6;
+@nav-header-color:                              #fff;
 @nav-header-background:                         #969696;
 @nav-header-font-weight:                        normal;
 @nav-header-margin-top:                         15px;
 
 @nav-side-color:                                #333;
-@nav-side-hover-background:                     #f4f3f0;
+@nav-side-background:                           #f1efea;
+@nav-side-height:                               20px;
+
+@nav-side-hover-background:                     #f8f7f5;
 @nav-side-hover-color:                          #333;
 @nav-side-active-background:                    #fff;
 @nav-side-active-color:                         #333;
@@ -62,8 +65,11 @@
 /*
  * Items
  */
+.jv-nav-side { background: @nav-side-background; }
 
 .jv-nav-side > li > a {
+    min-height: @nav-side-height;
+    line-height: @nav-side-height;
     color: @nav-side-color;
     .hook-nav-side;
 }
