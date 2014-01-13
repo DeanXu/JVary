@@ -4,10 +4,13 @@
 // Component:       jv-icon-*
 //
 // Modifiers:       jv-icon-small
+//                  jv-icon-button
+//
 //
 // ========================================================================
 
 @icon-path:                                "/resources/jv/img";
+@icon-button-hover-border-color:           #999;
 
 [class*='jv-icon-'] {
     display: inline-block;
@@ -123,10 +126,35 @@
     background-position: -35px -313px;
 }
 
+.jv-icon-qq {
+    width: 24px;
+    height: 24px;
+    background-position: -69px -8px;
+}
+
+.jv-icon-weibo {
+    width: 24px;
+    height: 24px;
+    background-position: -69px -68px;
+}
+
 
 .jv-icon-small { vertical-align: -25%; }
 .jv-icon-big { vertical-align: -15%; }
 
+/* Modifier: jv-icon-button
+ ========================================================================== */
+
+.jv-icon-button {
+    border: 1px solid transparent;
+}
+
+.jv-icon-button:hover,
+.jv-icon-button:focus {
+    border: 1px solid @icon-button-hover-border-color;
+    text-decoration: none;
+    outline: none;
+}
 
 .hook-icon-misc;
 
