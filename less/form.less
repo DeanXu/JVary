@@ -167,6 +167,11 @@ textarea {
 @form-legend-border:                            #545454;
 @form-legend-color:                             #333;
 
+@form-danger-border:                            #dc8d99;
+@form-danger-background:                        #fff;
+@form-danger-color:                             #c91032;
+
+
 @form-stacked-label-margin-horizontal:          3px;
 @form-stacked-label-color:                      #333;
 
@@ -176,7 +181,6 @@ textarea {
 
 .jv-form select,
 .jv-form textarea,
-.jv-form input:not([type]),
 .jv-form input[type="text"],
 .jv-form input[type="password"],
 .jv-form input[type="datetime"],
@@ -238,6 +242,13 @@ textarea {
 }
 
 
+.jv-form-danger {
+    border-color: @form-danger-border !important;
+    background: @form-danger-background !important;
+    color: @form-danger-color !important;
+}
+
+
 
 /* Sub-objects: jv-form-row
  * Groups labels and controls in rows
@@ -255,7 +266,7 @@ textarea {
 /* modifiers: jv-form-stacked
  ========================================================================== */
 
-.jv-form-stacked .jv-form-label{
+.jv-form-stacked .jv-form-label {
     display: block;
     margin-bottom: @form-stacked-label-margin-horizontal;
     color: @form-stacked-label-color;
@@ -264,8 +275,15 @@ textarea {
 
 
 
+.hook-form-misc;
 
 .hook-form() {}
+.hook-form-misc() {
+    .jv-form-danger + * {
+        font-size: 12px;
+        color: #c78676;
+    }
+}
 
 
 

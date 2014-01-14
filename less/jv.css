@@ -604,6 +604,30 @@ a.jv-button {
   text-decoration: none;
   outline: none;
 }
+/* ========================================================================
+   Component: Alert
+ ========================================================================== */
+.jv-alert {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #ebf7fd;
+  color: #2d7091;
+}
+.jv-alert p {
+  text-align: center;
+}
+* + .jv-alert {
+  margin-top: 15px;
+}
+.jv-alert > .jv-close:first-child {
+  float: right;
+}
+/* Modifier: jv-alert-warning
+ ========================================================================== */
+.jv-alert-warning {
+  background: #fff1f0;
+  color: #d85030;
+}
 .modal-open {
   overflow: hidden;
 }

@@ -133,7 +133,6 @@ textarea {
  ========================================================================== */
 .jv-form select,
 .jv-form textarea,
-.jv-form input:not([type]),
 .jv-form input[type="text"],
 .jv-form input[type="password"],
 .jv-form input[type="datetime"],
@@ -159,7 +158,6 @@ textarea {
 }
 .jv-form select:focus,
 .jv-form textarea:focus,
-.jv-form input:not([type]):focus,
 .jv-form input[type="text"]:focus,
 .jv-form input[type="password"]:focus,
 .jv-form input[type="datetime"]:focus,
@@ -181,7 +179,6 @@ textarea {
 }
 .jv-form select:disabled,
 .jv-form textarea:disabled,
-.jv-form input:not([type]):disabled,
 .jv-form input[type="text"]:disabled,
 .jv-form input[type="password"]:disabled,
 .jv-form input[type="datetime"]:disabled,
@@ -230,6 +227,11 @@ textarea {
   display: block;
   border-bottom: 2px solid #545454;
 }
+.jv-form-danger {
+  border-color: #dc8d99 !important;
+  background: #ffffff !important;
+  color: #c91032 !important;
+}
 /* Sub-objects: jv-form-row
  * Groups labels and controls in rows
  ========================================================================== */
@@ -250,4 +252,8 @@ textarea {
   display: block;
   margin-bottom: 3px;
   color: #333333;
+}
+.jv-form-danger + * {
+  font-size: 12px;
+  color: #c78676;
 }

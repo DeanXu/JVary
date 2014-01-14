@@ -1,0 +1,52 @@
+// Name:            Alert
+// Description:     Defines styles for alert messages
+//
+// Component:       jv-alert
+// 
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@alert-margin-vertical:                         15px;
+@alert-padding:                                 10px;
+@alert-background:                              #ebf7fd;
+@alert-color:                                   #2d7091;
+
+@alert-warning-background:                       #fff1f0;
+@alert-warning-color:                            #d85030;
+
+
+/* ========================================================================
+   Component: Alert
+ ========================================================================== */
+
+.jv-alert {
+    margin-bottom: @alert-margin-vertical;
+    padding: @alert-padding;
+    background: @alert-background;
+    color: @alert-color;
+    .hook-alert;
+}
+
+* + .jv-alert { margin-top: @alert-margin-vertical; }
+
+.jv-alert > .jv-close:first-child { float: right; }
+
+
+
+/* Modifier: jv-alert-warning
+ ========================================================================== */
+
+.jv-alert-warning {
+    background: @alert-warning-background;
+    color: @alert-warning-color;
+}
+
+.hook-alert-misc;
+
+.hook-alert() {}
+.hook-alert-misc() {}
+
