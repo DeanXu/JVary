@@ -13,8 +13,8 @@
                 var index = $(this).index();
                 liObj.removeClass("jv-active");
                 $(this).addClass("jv-active");
-                swiObj.find("li").removeClass("jv-active");
-                swiObj.find("li:eq("+index+")").addClass("jv-active");
+                swiObj.children("li").removeClass("jv-active");
+                swiObj.children("li:eq("+index+")").addClass("jv-active");
             });
         });
     }

@@ -9,8 +9,12 @@
 // ========================================================================
 @utility-container-width:                       980px;
 @utility-container-padding-horizontal:          25px;
+
 @utility-margin-vertical-medium:                30px;
 @utility-margin-horizontal-medium:              30px;
+
+@utility-margin-vertical-small:                 15px;
+@utility-margin-horizontal-small:               15px;
 
 
 /* ========================================================================
@@ -30,10 +34,17 @@
 
 [class*='jv-float-'] { max-width: 100%; }
 
+.jv-display-inline-block { display: inline-block!important; }
+
 
 /*
  * Margins
  */
+
+.jv-margin-top-small { margin-top: @utility-margin-vertical-small !important; }
+.jv-margin-bottom-small { margin-bottom: @utility-margin-vertical-small !important; }
+.jv-margin-left-small { margin-left: @utility-margin-horizontal-small !important; }
+.jv-margin-right-small { margin-right: @utility-margin-horizontal-small !important; }
 
 .jv-margin-top-medium { margin-top: @utility-margin-vertical-medium !important; }
 .jv-margin-bottom-medium { margin-bottom: @utility-margin-vertical-medium !important; }

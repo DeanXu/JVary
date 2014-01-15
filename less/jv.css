@@ -12,11 +12,83 @@ textarea {
   /* 3 */
 }
 button,
+input {
+  line-height: normal;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button:disabled,
+input:disabled {
+  cursor: default;
+}
+/*
+ * 2. Removes excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+}
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+/*
+ * Removes placeholder transparency in Firefox.
+ */
+::-moz-placeholder {
+  opacity: 1;
+}
+/* Tables
+ ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /* ========================================================================
    Component: Base
@@ -365,7 +437,10 @@ input[type="checkbox"] {
 /* ========================================================================
    Component: Heading
  ========================================================================== */
-h1,
+h1 {
+  margin: 0 0 15px 0;
+  font-weight: normal;
+}
 h2,
 h3,
 h4,
@@ -440,6 +515,10 @@ a.jv-button {
 .jv-button:active,
 .jv-button.jv-active {
   background-color: #7b7b7b;
+  color: #ffffff;
+}
+.jv-button:disabled {
+  background-color: #b8b5af;
   color: #ffffff;
 }
 /* Color modifiers
@@ -735,10 +814,10 @@ a.jv-button {
 /* Color modifiers
  ========================================================================== */
 .jv-text-muted {
-  color: #cccccc !important;
+  color: #999999 !important;
 }
 .jv-text-warning {
-  color: #c78676 !important;
+  color: #e49e8c !important;
 }
 /* ========================================================================
    Component: Utility
@@ -759,9 +838,24 @@ a.jv-button {
 [class*='jv-float-'] {
   max-width: 100%;
 }
+.jv-display-inline-block {
+  display: inline-block !important;
+}
 /*
  * Margins
  */
+.jv-margin-top-small {
+  margin-top: 15px !important;
+}
+.jv-margin-bottom-small {
+  margin-bottom: 15px !important;
+}
+.jv-margin-left-small {
+  margin-left: 15px !important;
+}
+.jv-margin-right-small {
+  margin-right: 15px !important;
+}
 .jv-margin-top-medium {
   margin-top: 30px !important;
 }

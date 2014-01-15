@@ -227,10 +227,13 @@ textarea {
   display: block;
   border-bottom: 2px solid #545454;
 }
+.jv-form-success {
+  border-color: #b5b5b5 !important;
+  background: #ffffff !important;
+}
 .jv-form-danger {
   border-color: #dc8d99 !important;
   background: #ffffff !important;
-  color: #c91032 !important;
 }
 /* Sub-objects: jv-form-row
  * Groups labels and controls in rows
@@ -246,6 +249,13 @@ textarea {
 .jv-form-row + .jv-form-row {
   margin-top: 15px;
 }
+.jv-form-help-inline {
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+.jv-form-help-block {
+  margin: 5px 0 0 0;
+}
 /* modifiers: jv-form-stacked
  ========================================================================== */
 .jv-form-stacked .jv-form-label {
@@ -253,7 +263,16 @@ textarea {
   margin-bottom: 3px;
   color: #333333;
 }
-.jv-form-danger + * {
-  font-size: 12px;
+.jv-form-error-msg {
   color: #c78676;
+}
+.jv-form-error-msg > li:before {
+  content: '';
+  display: inline-block;
+  background-image: url("/resources/jv/img/icon-sprit.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  background-position: -371px -58px;
+  vertical-align: -25%;
 }

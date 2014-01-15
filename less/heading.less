@@ -16,6 +16,8 @@
 // ========================================================================
 
 @heading-margin-vertical:                          10px;
+@heading-h1-margin-vertical:                       15px;
+
 
 @heading-font-weight:                              normal;
 @heading-h1-font-size:                             24px;
@@ -41,11 +43,16 @@
    Component: Heading
  ========================================================================== */
 
+h1 { 
+    margin: 0 0 @heading-h1-margin-vertical 0; 
+    font-weight: @heading-font-weight;
+}
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     margin: 0 0 @heading-margin-vertical 0;
     font-weight: @heading-font-weight;
 }
+
 
 h1, .jv-h1 {
     font-size: @heading-h1-font-size;
