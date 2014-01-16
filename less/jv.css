@@ -1,5 +1,8 @@
 /* Reset 
  ========================================================================== */
+small {
+  font-size: 80%;
+}
 button,
 input,
 select,
@@ -233,6 +236,12 @@ input[type="checkbox"] {
   color: #666666;
   background: #f8f7f6;
 }
+/* Modifier: Color and Background
+ ========================================================================== */
+.jv-panel-secondary {
+  color: #666666;
+  background: #dcdad5;
+}
 /* Modifier: jv-panel-border
  ========================================================================== */
 .jv-panel-border {
@@ -375,8 +384,6 @@ input[type="checkbox"] {
   border-bottom-width: 0;
   color: #333333;
   text-decoration: none;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
 }
 .jv-tab > li:first-child > a {
   margin-left: 0;
@@ -391,17 +398,52 @@ input[type="checkbox"] {
   background: #b8b5af;
   color: #ffffff;
 }
+/* Modifier: jv-tab-center
+ ========================================================================== */
+.jv-tab-center {
+  border-bottom: 1px solid #d1cfc9;
+}
+.jv-tab-center-bottom {
+  border-bottom: none;
+  border-top: 1px solid #d1cfc9;
+}
+.jv-tab-center:before,
+.jv-tab-center:after {
+  content: " ";
+  display: table;
+}
+.jv-tab-center:after {
+  clear: both;
+}
+.jv-tab-center .jv-tab {
+  position: relative;
+  left: 50%;
+  border: none;
+  float: left;
+}
+.jv-tab-center .jv-tab > li {
+  position: relative;
+  left: -50%;
+}
+.jv-tab-center .jv-tab > li > a {
+  text-align: center;
+}
 /* Modifier: jv-tab-grid
  ========================================================================== */
 .jv-tab-grid > li > a {
   text-align: center;
-  border-radius: 0px;
 }
 .jv-switcher > li {
   display: none;
 }
 .jv-switcher > .jv-active {
   display: block;
+}
+/* Modifier: jv-tab-radius
+ ========================================================================== */
+.jv-tab-radius > li > a {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 /* ========================================================================
    Component: Table
@@ -456,23 +498,23 @@ h1,
 }
 h2,
 .jv-h2 {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 20px;
+  line-height: 26px;
 }
 h3,
 .jv-h3 {
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 24px;
 }
 h4,
 .jv-h4 {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 22px;
 }
 h5,
 .jv-h5 {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 20px;
 }
 h6,
 .jv-h6 {

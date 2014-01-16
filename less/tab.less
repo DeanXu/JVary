@@ -4,6 +4,7 @@
 // Component:       jv-tab
 //
 // Modifiers:       jv-tab-grid
+//                  jv-tab-center
 //
 // ========================================================================
 
@@ -21,6 +22,8 @@
 
 @tab-active-background:                         #b8b5af;
 @tab-active-color:                              #fff;
+
+@tab-radius:                                    3px;
 
 
 /* ========================================================================
@@ -55,7 +58,6 @@
     border-bottom-width: 0;
     color: @tab-color;
     text-decoration: none;
-    .hook-tab;
 }
 
 .jv-tab > li:first-child > a { margin-left: 0; }
@@ -72,6 +74,40 @@
     color: @tab-active-color;
 }
 
+/* Modifier: jv-tab-center
+ ========================================================================== */
+
+.jv-tab-center { border-bottom: 1px solid @tab-border-color; }
+
+.jv-tab-center-bottom {
+    border-bottom: none;
+    border-top: 1px solid @tab-border-color;
+}
+
+.jv-tab-center:before,
+.jv-tab-center:after {
+    content: " ";
+    display: table;
+}  
+
+.jv-tab-center:after { clear: both; }
+
+.jv-tab-center .jv-tab {
+    position: relative;
+    left: 50%;
+    border: none;
+    float: left;
+}
+
+.jv-tab-center .jv-tab > li {
+    position: relative;
+    left: -50%;
+}  
+
+.jv-tab-center .jv-tab > li > a { text-align: center; }
+
+
+
 /* Modifier: jv-tab-grid
  ========================================================================== */
 
@@ -82,7 +118,14 @@
 
 .hook-tab-misc;
 
-.hook-tab() {}
 .hook-tab-grid() {}
 .hook-tab-misc() {}
+
+/* Modifier: jv-tab-radius
+ ========================================================================== */
+
+.jv-tab-radius > li > a {
+    border-top-left-radius: @tab-radius;
+    border-top-right-radius: @tab-radius;
+}
 
