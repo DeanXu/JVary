@@ -280,7 +280,7 @@ input[type="checkbox"] {
  * Items
  */
 .jv-nav-side {
-  background: #f1efea;
+  background: #e8e6e0;
 }
 .jv-nav-side > li > a {
   min-height: 20px;
@@ -340,6 +340,7 @@ input[type="checkbox"] {
   text-align: center;
 }
 .jv-nav-side .jv-nav-sub > li > a {
+  color: #666;
   min-height: 20px;
   line-height: 20px;
   background: #ffffff;
@@ -347,7 +348,7 @@ input[type="checkbox"] {
 }
 .jv-nav-side .jv-nav-sub > li > a:hover,
 .jv-nav-side .jv-nav-sub > li.jv-active > a {
-  color: #e49e8c;
+  color: #c78676;
 }
 .jv-nav-side .jv-nav-sub > li > a:hover:after,
 .jv-nav-side .jv-nav-sub > li.jv-active > a:after {
@@ -903,7 +904,7 @@ a.jv-button {
   color: #999999 !important;
 }
 .jv-text-warning {
-  color: #e49e8c !important;
+  color: #c78676 !important;
 }
 /* ========================================================================
    Component: Utility
