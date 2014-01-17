@@ -15,6 +15,8 @@
 
 @nav-parent-icon-margin-right:                  0px;
 
+@nav-sub-background:                            #fff;
+
 @nav-header-padding-vertical:                   @nav-padding-vertical;
 @nav-header-padding-horizontal:                 @nav-padding-horizontal;
 @nav-header-font-size:                          14px;
@@ -49,24 +51,6 @@
 }
 
 .jv-nav > li > a { padding: @nav-padding-vertical @nav-padding-horizontal; }
-
-.jv-nav-parent-icon > .jv-parent:hover > a:after,
-.jv-nav-parent-icon > .jv-parent.jv-open > a:after {
-    content: '';
-    margin-right: @nav-parent-icon-margin-right;
-    background-image: url("@{icon-path}/icon-sprit.png");
-    background-repeat: no-repeat;
-    .jv-icon-bottom-arrow;
-    float: right;
-    margin-top: 6px;
-    margin-left: -10px;
-}
-
-.jv-nav-parent-icon > .jv-parent.jv-open {
-    .jv-nav-sub
-}
-
-
 
 .jv-nav-header {
     padding: @nav-header-padding-vertical @nav-header-padding-horizontal;
@@ -106,6 +90,18 @@
     background: @nav-side-active-background;
     color: @nav-side-active-color;
     .hook-nav-side-active;
+}
+
+.jv-nav-side.jv-nav-parent-icon > .jv-parent:hover > a:after,
+.jv-nav-side.jv-nav-parent-icon > .jv-parent.jv-open > a:after {
+    content: '';
+    margin-right: @nav-parent-icon-margin-right;
+    background-image: url("@{icon-path}/icon-sprit.png");
+    background-repeat: no-repeat;
+    .jv-icon-bottom-arrow;
+    float: right;
+    margin-top: 6px;
+    margin-left: -10px;
 }
 
 
