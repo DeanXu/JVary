@@ -18,10 +18,14 @@
 @panel-line-height:                             1.8em;
 @panel-background:                              #fff;
 
+@panel-box-color:                               #666;
+@panel-box-background:                          #fff;
+
 @panel-title-margin-bottom:                     5px;
 @panel-title-font-size:                         14px;
-@panel-title-font-weight:                       normal;
+@panel-title-font-weight:                       bold;
 @panel-title-color:                             #c78676;
+@panel-box-title-color:                         #333;
 
 @panel-primary-background:                      #f8f7f6;
 @panel-primay-color:                            #666;
@@ -51,11 +55,7 @@
 
 .jv-panel:after { clear: both; }
 
-.jv-panel-title {
-    
-}
-
-/* Sub-object: `uk-panel-title`
+/* Sub-object: `jv-panel-title`
  ========================================================================== */
 
 .jv-panel-title {
@@ -64,6 +64,17 @@
     font-weight: @panel-title-font-weight;
     color: @panel-title-color;
 }
+
+
+/* Modifier: jv-panel-box
+ ========================================================================== */
+
+.jv-panel-box {
+    color: @panel-box-color;
+    background: @panel-box-background;
+}
+
+.jv-panel-box .jv-panel-title { color: @panel-box-title-color; }
 
 
 /* Modifier: Color and Background

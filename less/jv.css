@@ -222,13 +222,22 @@ input[type="checkbox"] {
 .jv-panel:after {
   clear: both;
 }
-/* Sub-object: `uk-panel-title`
+/* Sub-object: `jv-panel-title`
  ========================================================================== */
 .jv-panel-title {
   margin-bottom: 5px;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: bold;
   color: #c78676;
+}
+/* Modifier: jv-panel-box
+ ========================================================================== */
+.jv-panel-box {
+  color: #666666;
+  background: #ffffff;
+}
+.jv-panel-box .jv-panel-title {
+  color: #333333;
 }
 /* Modifier: Color and Background
  ========================================================================== */
@@ -528,8 +537,8 @@ h6 {
 }
 h1,
 .jv-h1 {
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 22px;
+  line-height: 28px;
 }
 h2,
 .jv-h2 {
@@ -560,6 +569,14 @@ h6,
   border-bottom: 2px solid #545454;
   line-height: 2em;
   color: #333333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
 }
 /* ========================================================================
    Component: Button
