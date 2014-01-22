@@ -7,6 +7,9 @@
 +(function($) {
     if($(".jv-tab").size() > 0) {
         $(".jv-tab").each(function(i,v) {
+            if($(this).is("[no-js]")){
+                return ;
+            }
             var swiObj = $($(this).data("jv-connect"));
             var liObj = $(this).find("li");
             liObj.click(function() {
