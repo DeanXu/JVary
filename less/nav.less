@@ -14,6 +14,7 @@
 @nav-padding-horizontal:                        15px;
 
 @nav-parent-icon-margin-right:                  0px;
+@nav-parent-actived-background:                 #d5d3ce;
 
 @nav-sub-background:                            #fff;
 
@@ -31,7 +32,7 @@
 
 @nav-side-hover-background:                     #f8f7f5;
 @nav-side-hover-color:                          #333;
-@nav-side-active-background:                    #fff;
+@nav-side-active-background:                    #d5d3ce;
 @nav-side-active-color:                         #333;
 
 /* ========================================================================
@@ -90,6 +91,10 @@
     background: @nav-side-active-background;
     color: @nav-side-active-color;
     .hook-nav-side-active;
+}
+
+.jv-nav-side.jv-nav-parent-icon > .jv-parent.jv-open {
+    background: @nav-parent-actived-background;
 }
 
 .jv-nav-side.jv-nav-parent-icon > .jv-parent:hover > a:after,

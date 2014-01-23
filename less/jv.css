@@ -314,7 +314,7 @@ input[type="checkbox"] {
   margin-left: -10px;
 }
 .jv-nav-side > li.jv-active > a {
-  background: #ffffff;
+  background: #d5d3ce;
   color: #333333;
 }
 .jv-nav-side > li.jv-active > a:after {
@@ -327,6 +327,9 @@ input[type="checkbox"] {
   float: right;
   margin-top: 5px;
   margin-left: -10px;
+}
+.jv-nav-side.jv-nav-parent-icon > .jv-parent.jv-open {
+  background: #d5d3ce;
 }
 .jv-nav-side.jv-nav-parent-icon > .jv-parent:hover > a:after,
 .jv-nav-side.jv-nav-parent-icon > .jv-parent.jv-open > a:after {
