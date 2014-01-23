@@ -212,7 +212,6 @@ input[type="checkbox"] {
 .jv-panel {
   padding: 15px;
   line-height: 1.8em;
-  background: #ffffff;
 }
 .jv-panel:before,
 .jv-panel:after {
