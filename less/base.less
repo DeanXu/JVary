@@ -6,6 +6,9 @@
 // Variable
 // ========================================================================
 
+@base-body-font-size:                           14px;
+@base-body-font-family:                         '\5FAE\8F6F\96C5\9ED1','simsun',Arial,sans-serif;
+@base-body-background:                          #f1efea;
 @base-body-color:                               #666;
 
 @base-link-color:                               #000;
@@ -15,8 +18,12 @@
    Component: Base
  ========================================================================== */
 
+html { font-size: @base-body-font-size; }
+
 body {
+    background: @base-body-background;
     color: @base-body-color;
+    font-family: @base-body-font-family;
 }
 
 a { text-decoration: none; }
