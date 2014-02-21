@@ -35,6 +35,9 @@
 @nav-side-active-background:                    #d5d3ce;
 @nav-side-active-color:                         #333;
 
+@nav-side-font-size:                            14px;
+
+
 /* ========================================================================
    Component: Nav
  ========================================================================== */
@@ -87,7 +90,8 @@
     .hook-nav-side-hover;
 }
 
-.jv-nav-side > li.jv-active > a {
+.jv-nav-side > li.jv-active > a ,
+.jv-nav-side > li.jv-open > a {
     background: @nav-side-active-background;
     color: @nav-side-active-color;
     .hook-nav-side-active;
@@ -95,6 +99,10 @@
 
 .jv-nav-side.jv-nav-parent-icon > .jv-parent.jv-open {
     background: @nav-parent-actived-background;
+}
+
+.jv-nav-side.jv-nav-parent-icon > .jv-parent.jv-open > a {
+    font-size: @nav-side-font-size;
 }
 
 .jv-nav-side.jv-nav-parent-icon > .jv-parent:hover > a:after,

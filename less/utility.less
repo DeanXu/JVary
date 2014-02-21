@@ -7,8 +7,12 @@
 
 // Variables
 // ========================================================================
+
+@utility-wrapper-vertical-top:                  124px;
+@utility-wrapper-vertical-bottom:               230px;
+
 @utility-container-width:                       980px;
-@utility-container-padding-horizontal:          25px;
+@utility-container-padding-horizontal:          0px;
 
 @utility-margin-vertical-medium:                30px;
 @utility-margin-horizontal-medium:              30px;
@@ -20,6 +24,16 @@
 /* ========================================================================
    Component: Utility
  ========================================================================== */
+
+.jv-wrapper {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 100%;
+    padding-top: @utility-wrapper-vertical-top;
+    padding-bottom: @utility-wrapper-vertical-bottom;
+    margin-top: -@utility-wrapper-vertical-top;
+    margin-bottom: -@utility-wrapper-vertical-bottom;
+}
 
 .jv-container {
     -moz-box-sizing: border-box;
@@ -50,5 +64,10 @@
 .jv-margin-bottom-medium { margin-bottom: @utility-margin-vertical-medium !important; }
 .jv-margin-left-medium { margin-left: @utility-margin-horizontal-medium !important; }
 .jv-margin-right-medium { margin-right: @utility-margin-horizontal-medium !important; }
+
+.jv-hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
 
 
