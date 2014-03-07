@@ -1,0 +1,34 @@
+// Name:            Article
+// Description:     Defines styles for articles within your page
+//
+// Component:       jv-article
+//
+// Sub-objects:     jv-article-divider
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+
+@article-divider-margin:                        25px;
+@article-divider-border:                        #999;
+@article-divider-border-style:                  dashed;
+
+
+
+
+
+/* Sub-object jv-article-divider
+ ========================================================================== */
+
+.jv-article-divider {
+    margin-bottom: @article-divider-margin;
+    border-color: @article-divider-border;
+    border-style: @article-divider-border-style;
+}
+
+* + .jv-article-divider { margin-top: @article-divider-margin; }
+
+

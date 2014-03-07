@@ -14,6 +14,9 @@
 @base-link-color:                               #000;
 @base-link-hover-color:                         #000;
 
+@base-hr-border-width:                          1px;
+@base-hr-border:                                #666;
+
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -41,5 +44,29 @@ select { vertical-align: middle; }
 input[type="radio"],
 input[type="checkbox"] { vertical-align: baseline; }
 
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
 
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+    -moz-box-sizing: border-box; /* 4 */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
+select { font-size: 12px; }
+
+hr {
+    display: block;
+    padding: 0;
+    border: 0;
+    border-top: @base-hr-border-width solid @base-hr-border;
+}
