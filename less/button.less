@@ -4,32 +4,39 @@
 // Component:       jv-button
 //
 // Modifiers:       jv-button-primary
-//                  jv-button-small
+//                  jv-button-success
+//                  jv-button-disabled
 //                  jv-button-mini
-//                  jv-button-expand
+//                  jv-button-small
+//                  jv-button-large
 //
 // States:          jv-active
 //
 // ========================================================================
 
+
 // Variable
 // ========================================================================
 
 @button-height:                                 30px;
-@button-small-height:                           25px;
 @button-mini-height:                            20px;
+@button-small-height:                           25px;
+@button-large-height:                           35px;
 
 @button-line-height:                            @button-height;
-@button-small-line-height:                      @button-small-height;
 @button-mini-line-height:                       @button-mini-height;
+@button-small-line-height:                      @button-small-height;
+@button-large-line-height:                      @button-large-height;
 
 @button-font-size:                              16px;
-@button-small-font-size:                        14px;
 @button-mini-font-size:                         12px;
+@button-small-font-size:                        14px;
+@button-large-font-size:                        18px;
 
 @button-padding-horizontal:                     30px;
-@button-small-padding-horizontal:               20px;
 @button-mini-padding-horizontal:                15px;
+@button-small-padding-horizontal:               20px;
+@button-large-padding-horizontal:               35px;
 
 @button-background:                             #969696;
 @button-color:                                  #fff;
@@ -46,6 +53,14 @@
 @button-primary-hover-color:                    #fff;
 @button-primary-active-background:              #e49e8c;
 @button-primary-active-color:                   #fff;
+
+@button-success-background:                     #a8bd44;
+@button-success-color:                          #fff;
+@button-success-hover-background:               #b9ca69;
+@button-success-hover-color:                    #fff;
+@button-success-active-background:              #b9ca69;
+@button-success-active-color:                   #fff;
+
 
 /* ========================================================================
    Component: Button
@@ -88,7 +103,12 @@ a.jv-button {
     .hook-button-active;
 }
 
-.jv-button:disabled {
+.jv-button:disabled,
+.jv-button-disabled,
+.jv-button-disabled:hover,
+.jv-button-disabled:active,
+.jv-button-disabled:focus {
+    cursor: default;
     background-color: @button-disabled-background;
     color: @button-disabled-color;
 }
@@ -111,21 +131,33 @@ a.jv-button {
 }
 
 .jv-button-primary:active,
-.jv-button-primary.uk-active {
+.jv-button-primary.jv-active {
     background-color: @button-primary-active-background;
     color: @button-primary-active-color;
     .hook-button-primary-active;
 }
 
+.jv-button-success {
+    background: @button-success-background;
+    color: @button-success-color;
+}
+
+.jv-button-success:hover,
+.jv-button-success:focus {
+    background-color: @button-success-hover-background;
+    color: @button-success-hover-color;
+}
+
+.jv-button-success:active,
+.jv-button-success.jv-active {
+    background-color: @button-success-active-background;
+    color: @button-success-active-color;
+}
+
+
 /* Size modifiers
  ========================================================================== */
 
-.jv-button-small {
-    min-height: @button-small-height;
-    padding: 0 @button-small-padding-horizontal;
-    line-height: @button-small-line-height;
-    font-size: @button-small-font-size;
-}
 .jv-button-mini {
     min-height: @button-mini-height;
     padding: 0 @button-mini-padding-horizontal;
@@ -133,16 +165,20 @@ a.jv-button {
     font-size: @button-mini-font-size;
 }
 
-/*
- * Behave like a block element and take the full width
- */
-
-.jv-button-expand {
-    display: block;
-    width: 100%;
+.jv-button-small {
+    min-height: @button-small-height;
+    padding: 0 @button-small-padding-horizontal;
+    line-height: @button-small-line-height;
+    font-size: @button-small-font-size;
 }
 
-.jv-button-expend + .jv-button-expend { margin-top: 10px; }
+.jv-button-large {
+    min-height: @button-large-height;
+    padding: 0 @button-large-padding-horizontal;
+    line-height: @button-large-line-height;
+    font-size: @button-large-font-size;
+}
+
 
 // Hooks
 // ========================================================================
