@@ -8,6 +8,8 @@
 //
 // Modifiers:       jv-panel-border
 //                  jv-panel-primary
+//                  jv-panel-secondary
+//                  jv-panel-tertiary
 //
 // ========================================================================
 
@@ -16,9 +18,6 @@
 
 @panel-padding:                                 30px;
 @panel-line-height:                             2em;
-
-@panel-box-color:                               #666;
-@panel-box-background:                          #fff;
 
 @panel-title-margin-bottom:                     5px;
 @panel-title-font-size:                         14px;
@@ -40,7 +39,6 @@
 @panel-border-color:                            #bebebe;
 
 
-
 /* ========================================================================
    Component: Panel
  ========================================================================= */
@@ -58,6 +56,7 @@
 
 .jv-panel:after { clear: both; }
 
+
 /* Sub-object: `jv-panel-title`
  ========================================================================== */
 
@@ -67,17 +66,6 @@
     font-weight: @panel-title-font-weight;
     color: @panel-title-color;
 }
-
-
-/* Modifier: jv-panel-box
- ========================================================================== */
-
-.jv-panel-box {
-    color: @panel-box-color;
-    background: @panel-box-background;
-}
-
-.jv-panel-box .jv-panel-title { color: @panel-title-color; }
 
 
 /* Modifier: Color and Background
@@ -109,5 +97,4 @@
 .jv-panel-border {
     border: 1px solid @panel-border-color;
 }
-
 
