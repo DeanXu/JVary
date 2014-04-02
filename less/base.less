@@ -14,6 +14,8 @@
 @base-link-color:                               #000;
 @base-link-hover-color:                         #000;
 
+@base-margin-vertical:                          15px;
+
 @base-hr-border-width:                          1px;
 @base-hr-border:                                #666;
 
@@ -46,6 +48,19 @@ a:hover { text-decoration: underline; }
 
 a { color: @base-link-color; }
 a:hover { color: @base-link-hover-color; }
+
+p,
+hr,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+address,
+fieldset,
+figure { margin: 0 0 @base-margin-vertical 0; }
+
+img { max-width: 100%; }
 
 button,
 input,

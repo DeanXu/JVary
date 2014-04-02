@@ -7,15 +7,15 @@
 // Component:       jv-panel
 //
 // Modifiers:       jv-panel-border
-//                  jv-panel-primay
+//                  jv-panel-primary
 //
 // ========================================================================
 
 // Variables
 // ========================================================================
 
-@panel-padding:                                 15px;
-@panel-line-height:                             1.8em;
+@panel-padding:                                 30px;
+@panel-line-height:                             2em;
 
 @panel-box-color:                               #666;
 @panel-box-background:                          #fff;
@@ -24,13 +24,18 @@
 @panel-title-font-size:                         14px;
 @panel-title-font-weight:                       bold;
 @panel-title-color:                             #c78676;
-@panel-box-title-color:                         #333;
 
-@panel-primary-background:                      #f8f7f6;
-@panel-primay-color:                            #666;
+@panel-primary-background:                      #b61924;
+@panel-primary-color:                            #fff;
+@panel-primary-title-color:                      #fff;
 
-@panel-secondary-background:                    #dcdad5;
-@panel-secondary-color:                         #666;
+@panel-secondary-background:                    #231f20;
+@panel-secondary-color:                         #fff;
+@panel-secondary-title-color:                   #fff;
+
+@panel-tertiary-background:                     #d0d0d0;
+@panel-tertiary-color:                          #fff;
+@panel-tertiary-title-color:                    #fff;
 
 @panel-border-color:                            #bebebe;
 
@@ -40,7 +45,7 @@
    Component: Panel
  ========================================================================= */
 
-.jv-panel { 
+.jv-panel {
     padding: @panel-padding;
     line-height: @panel-line-height;
 }
@@ -72,25 +77,31 @@
     background: @panel-box-background;
 }
 
-.jv-panel-box .jv-panel-title { color: @panel-box-title-color; }
+.jv-panel-box .jv-panel-title { color: @panel-title-color; }
 
 
 /* Modifier: Color and Background
  ========================================================================== */
 
 .jv-panel-primary {
-    color: @panel-primay-color;
+    color: @panel-primary-color;
     background: @panel-primary-background;
 }
-
-/* Modifier: Color and Background
- ========================================================================== */
+.jv-panel-primary .jv-panel-title { color: @panel-primary-title-color; }
 
 .jv-panel-secondary {
     color: @panel-secondary-color;
     background: @panel-secondary-background;
 }
 
+.jv-panel-secondary .jv-panel-title { color: @panel-secondary-title-color; }
+
+.jv-panel-tertiary {
+    color: @panel-tertiary-color;
+    background: @panel-tertiary-background;
+}
+
+.jv-panel-tertiary .jv-panel-title { color: @panel-tertiary-title-color; }
 
 /* Modifier: jv-panel-border
  ========================================================================== */

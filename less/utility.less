@@ -57,6 +57,28 @@
 
 .jv-height-1-1 { height: 100%; }
 
+/* Vertical alignment
+ ========================================================================== */
+
+.jv-vertical-align:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.jv-vertical-align-middle,
+.jv-vertical-align-bottom {
+    display: inline-block;
+    max-width: 100%;
+    margin-left: -4px;
+}
+
+.jv-vertical-align-middle { vertical-align: middle; }
+.jv-vertical-align-bottom { vertical-align: bottom; }
+
+
+
 /*
  * Margins
  */
