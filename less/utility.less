@@ -8,9 +8,6 @@
 // Variables
 // ========================================================================
 
-@utility-wrapper-vertical-top:                  124px;
-@utility-wrapper-vertical-bottom:               230px;
-
 @utility-container-width:                       1220px;
 @utility-container-padding-horizontal:          0px;
 
@@ -36,15 +33,6 @@
    Component: Utility
  ========================================================================== */
 
-.jv-wrapper {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    min-height: 100%;
-    padding-top: @utility-wrapper-vertical-top;
-    padding-bottom: @utility-wrapper-vertical-bottom;
-    margin-top: -@utility-wrapper-vertical-top;
-    margin-bottom: -@utility-wrapper-vertical-bottom;
-}
 
 .jv-container {
     -moz-box-sizing: border-box;
@@ -66,6 +54,8 @@
 
 .jv-display-inline-block { display: inline-block!important; }
 
+
+.jv-height-1-1 { height: 100%; }
 
 /*
  * Margins
@@ -99,4 +89,9 @@
     visibility: hidden !important;
 }
 
+// Hooks
+// ========================================================================
 
+.hook-utility-misc;
+
+.hook-utility-misc() {}

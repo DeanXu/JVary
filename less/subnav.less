@@ -1,0 +1,31 @@
+// Name:            Subnav
+// Description:     Defines styles for the sub navigation
+//
+// Component:       jv-subnav
+//
+// States:          jv-active
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@subnav-margin:                             20px;
+
+
+/* ========================================================================
+   Component: Subnav
+ ========================================================================== */
+
+.jv-subnav {
+    padding: 0;
+    list-style: none;
+}
+
+.jv-subnav > li,
+.jv-subnav > li > a,
+.jv-subnav > li > span { display: inline-block; }
+
+.jv-subnav > li { margin-left: @subnav-margin; }
+.jv-subnav > li:first-child { margin-left: 0; }
+

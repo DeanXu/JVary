@@ -12,7 +12,7 @@
 }
 
 .hook-tab-misc() {
-    .jv-switcher { 
+    .jv-switcher {
         margin: 0;
         padding: 0;
     }
@@ -73,6 +73,23 @@
     p { text-align: center; }
 }
 
-.hook-heading-misc() { 
+.hook-heading-misc() {
     h1,h2,h3,h4,h5,h6{ color: #333; }
+}
+
+.hook-utility-misc() {
+  @utility-wrapper-vertical-top:                  72px;
+  @utility-wrapper-vertical-bottom:               45px;
+
+  .jv-wrapper,
+  .jv-content{
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      height: 100%;
+      padding-top: @utility-wrapper-vertical-top;
+      padding-bottom: @utility-wrapper-vertical-bottom;
+      margin-top: -@utility-wrapper-vertical-top;
+      margin-bottom: -@utility-wrapper-vertical-bottom;
+  }
+
 }
