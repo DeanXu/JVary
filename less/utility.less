@@ -52,6 +52,14 @@
 
 [class*='jv-float-'] { max-width: 100%; }
 
+.uk-clearfix:before,
+.uk-clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.uk-clearfix:after { clear: both; }
+
 .jv-display-inline-block { display: inline-block!important; }
 
 
@@ -97,6 +105,14 @@
 .jv-margin-bottom-large { margin-bottom: @utility-margin-vertical-large !important; }
 .jv-margin-left-large { margin-left: @utility-margin-horizontal-large !important; }
 .jv-margin-right-large { margin-right: @utility-margin-horizontal-large !important; }
+
+/*
+ * Remove margins
+ */
+
+.jv-margin-remove { margin: 0 !important; }
+.jv-margin-top-remove { margin-top: 0 !important; }
+.jv-margin-bottom-remove { margin-bottom: 0 !important; }
 
 .jv-font-size-small { font-size: @utility-font-size-small; }
 
