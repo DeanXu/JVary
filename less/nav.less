@@ -13,6 +13,9 @@
 @nav-padding-vertical:                          5px;
 @nav-padding-horizontal:                        15px;
 
+@nav-nested-padding-vertical:                   5px;
+@nav-nested-padding-horizontal:                 15px;
+
 @nav-parent-icon-margin-right:                  0px;
 @nav-parent-actived-background:                 #d5d3ce;
 
@@ -27,16 +30,18 @@
 @nav-header-margin-top:                         15px;
 
 @nav-side-color:                                #333;
-@nav-side-background:                           #e8e6e0;
-@nav-side-height:                               20px;
-@nav-side-font-size:                            12px;
+@nav-side-background:                           #fff;
+@nav-side-height:                               30px;
+@nav-side-font-size:                            16px;
 
-@nav-side-hover-background:                     #f8f7f5;
-@nav-side-hover-color:                          #333;
+@nav-side-hover-background:                     #b61924;
+@nav-side-hover-color:                          #fff;
 @nav-side-active-background:                    #d5d3ce;
 @nav-side-active-color:                         #333;
 
 @nav-side-open-font-size:                       14px;
+
+@nav-side-nested-color:                         #999;
 
 
 /* ========================================================================
@@ -50,9 +55,12 @@
     list-style: none;
 }
 
+.jv-nav ul a {
+    padding: @nav-nested-padding-vertical @nav-nested-padding-horizontal;
+}
+
 .jv-nav li > a {
     display: block;
-    text-decoration: none;
 }
 
 .jv-nav > li > a { padding: @nav-padding-vertical @nav-padding-horizontal; }
@@ -76,6 +84,10 @@
  */
 .jv-nav-side { background: @nav-side-background; }
 
+.jv-nav-side li > a {
+    color: @nav-side-nested-color;
+}
+
 .jv-nav-side > li > a {
     min-height: @nav-side-height;
     line-height: @nav-side-height;
@@ -88,6 +100,7 @@
 .jv-nav-side > li > a:focus {
     background: @nav-side-hover-background;
     color: @nav-side-hover-color;
+    text-decoration: none;
     outline: none;
     .hook-nav-side-hover;
 }
@@ -126,5 +139,4 @@
 .hook-nav-side-hover() {}
 .hook-nav-side-active() {}
 .hook-nav-misc() {}
-
 
