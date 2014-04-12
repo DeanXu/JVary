@@ -5,6 +5,7 @@
 //
 // Modifiers:       jv-button-primary
 //                  jv-button-success
+//                  jv-button-danger
 //                  jv-button-disabled
 //                  jv-button-mini
 //                  jv-button-small
@@ -38,28 +39,43 @@
 @button-small-padding-horizontal:               20px;
 @button-large-padding-horizontal:               35px;
 
-@button-background:                             #969696;
+@button-border-bottom-width:                    4px;
+
+@button-background:                             #494949;
 @button-color:                                  #fff;
-@button-hover-background:                       #7b7b7b;
+@button-hover-background:                       #636363;
 @button-hover-color:                            #fff;
-@button-active-background:                      #7b7b7b;
+@button-active-background:                      #494949;
 @button-active-color:                           #fff;
+@button-border-bottom-color:                    #202020;
+
 @button-disabled-background:                    #b8b5af;
 @button-disabled-color:                         #fff;
+@button-disabled-border-bottom-color:           #9b9b9b;
 
-@button-primary-background:                     #231f20;
+@button-primary-background:                     #ff6766;
 @button-primary-color:                          #fff;
-@button-primary-hover-background:               #000;
+@button-primary-hover-background:               #ff7372;
 @button-primary-hover-color:                    #fff;
-@button-primary-active-background:              #000;
+@button-primary-active-background:              #ff6766;
 @button-primary-active-color:                   #fff;
+@button-primary-border-bottom-color:            #ff4c4b;
 
-@button-success-background:                     #a8bd44;
+@button-success-background:                     #00ce9b;
 @button-success-color:                          #fff;
-@button-success-hover-background:               #b9ca69;
+@button-success-hover-background:               #00dfa8;
 @button-success-hover-color:                    #fff;
-@button-success-active-background:              #b9ca69;
+@button-success-active-background:              #00ce9b;
 @button-success-active-color:                   #fff;
+@button-success-border-bottom-color:            #1f7f5c;
+
+@button-danger-background:                     #ffb527;
+@button-danger-color:                          #fff;
+@button-danger-hover-background:               #ffbd3f;
+@button-danger-hover-color:                    #fff;
+@button-danger-active-background:              #ffb527;
+@button-danger-active-color:                   #fff;
+@button-danger-border-bottom-color:            #f7a22f;
 
 
 /* ========================================================================
@@ -71,9 +87,11 @@
     min-height: @button-height;
     padding: 0 @button-padding-horizontal;
     border: none;
+    border-bottom: @button-border-bottom-width solid @button-border-bottom-color;
     text-align: center;
     background: @button-background;
     line-height: @button-line-height;
+    border-radius: @global-border-radius;
     font-size: @button-font-size;
     color: @button-color;
     letter-spacing: normal;
@@ -102,6 +120,17 @@ a.jv-button {
     .hook-button-active;
 }
 
+.jv-button:active {
+    border-bottom-width: @button-border-bottom-width - 1;
+    margin-top: 1px;
+    .hook-button-click;
+}
+
+.jv-button.jv-active:active {
+    border-bottom-width: @button-border-bottom-width;
+    margin-top: 0px;
+}
+
 .jv-button:disabled,
 .jv-button-disabled,
 .jv-button-disabled:hover,
@@ -110,6 +139,8 @@ a.jv-button {
     cursor: default;
     background-color: @button-disabled-background;
     color: @button-disabled-color;
+    border-bottom: @button-border-bottom-width solid @button-disabled-border-bottom-color;
+    margin-top: 0;
 }
 
 
@@ -119,6 +150,7 @@ a.jv-button {
 .jv-button-primary {
     background: @button-primary-background;
     color: @button-primary-color;
+    border-bottom-color: @button-primary-border-bottom-color;
     .hook-button-primary;
 }
 
@@ -139,6 +171,7 @@ a.jv-button {
 .jv-button-success {
     background: @button-success-background;
     color: @button-success-color;
+    border-bottom-color: @button-success-border-bottom-color;
 }
 
 .jv-button-success:hover,
@@ -151,6 +184,24 @@ a.jv-button {
 .jv-button-success.jv-active {
     background-color: @button-success-active-background;
     color: @button-success-active-color;
+}
+
+.jv-button-danger {
+    background: @button-danger-background;
+    color: @button-danger-color;
+    border-bottom-color: @button-danger-border-bottom-color;
+}
+
+.jv-button-danger:hover,
+.jv-button-danger:focus {
+    background-color: @button-danger-hover-background;
+    color: @button-danger-hover-color;
+}
+
+.jv-button-danger:active,
+.jv-button-danger.jv-active {
+    background-color: @button-danger-active-background;
+    color: @button-danger-active-color;
 }
 
 
@@ -187,6 +238,7 @@ a.jv-button {
 .hook-button() {}
 .hook-button-hover() {}
 .hook-button-active() {}
+.hook-button-click() {}
 .hook-button-primary() {}
 .hook-button-primary-hover() {}
 .hook-button-primary-active() {}
