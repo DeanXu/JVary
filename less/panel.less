@@ -26,14 +26,17 @@
 @panel-primary-background:                      #04ce9b;
 @panel-primary-color:                           #fff;
 @panel-primary-title-color:                     #fff;
+@panel-primary-border-bottom-color:             #1f7f5c;
 
 @panel-secondary-background:                    #04c7ce;
 @panel-secondary-color:                         #fff;
 @panel-secondary-title-color:                   #fff;
+@panel-secondary-border-bottom-color:           #1f7e7f;
 
 @panel-tertiary-background:                     #ff6766;
 @panel-tertiary-color:                          #fff;
 @panel-tertiary-title-color:                    #fff;
+@panel-tertiary-border-bottom-color:           #ff4c4b;
 
 @panel-border-color:                            #bebebe;
 
@@ -73,12 +76,14 @@
 .jv-panel-primary {
     color: @panel-primary-color;
     background: @panel-primary-background;
+    border-bottom: @global-border-bottom-width solid @panel-primary-border-bottom-color;
 }
 .jv-panel-primary .jv-panel-title { color: @panel-primary-title-color; }
 
 .jv-panel-secondary {
     color: @panel-secondary-color;
     background: @panel-secondary-background;
+    border-bottom: @global-border-bottom-width solid @panel-secondary-border-bottom-color;
 }
 
 .jv-panel-secondary .jv-panel-title { color: @panel-secondary-title-color; }
@@ -86,6 +91,7 @@
 .jv-panel-tertiary {
     color: @panel-tertiary-color;
     background: @panel-tertiary-background;
+    border-bottom: @global-border-bottom-width solid @panel-tertiary-border-bottom-color;
 }
 
 .jv-panel-tertiary .jv-panel-title { color: @panel-tertiary-title-color; }

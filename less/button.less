@@ -39,8 +39,6 @@
 @button-small-padding-horizontal:               20px;
 @button-large-padding-horizontal:               35px;
 
-@button-border-bottom-width:                    4px;
-
 @button-background:                             #494949;
 @button-color:                                  #fff;
 @button-hover-background:                       #636363;
@@ -87,7 +85,7 @@
     min-height: @button-height;
     padding: 0 @button-padding-horizontal;
     border: none;
-    border-bottom: @button-border-bottom-width solid @button-border-bottom-color;
+    border-bottom: @global-border-bottom-width solid @button-border-bottom-color;
     text-align: center;
     background: @button-background;
     line-height: @button-line-height;
@@ -121,13 +119,13 @@ a.jv-button {
 }
 
 .jv-button:active {
-    border-bottom-width: @button-border-bottom-width - 1;
+    border-bottom-width: @global-border-bottom-width - 1;
     margin-top: 1px;
     .hook-button-click;
 }
 
 .jv-button.jv-active:active {
-    border-bottom-width: @button-border-bottom-width;
+    border-bottom-width: @global-border-bottom-width;
     margin-top: 0px;
 }
 
@@ -139,7 +137,7 @@ a.jv-button {
     cursor: default;
     background-color: @button-disabled-background;
     color: @button-disabled-color;
-    border-bottom: @button-border-bottom-width solid @button-disabled-border-bottom-color;
+    border-bottom: @global-border-bottom-width solid @button-disabled-border-bottom-color;
     margin-top: 0;
 }
 
