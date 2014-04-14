@@ -1,0 +1,93 @@
+// Name:            Navbar
+// Description:     Defines styles for the navigation bar
+//
+// Component:       jv-navbar
+//
+// sub-objects:     jv-navbar-brand
+//                  jv-navbar-nav
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@navbar-background:                             #04ce9b;
+@navbar-color:                                  #fff;
+@navbar-height:                                 40px;
+
+@navbar-brand-font-size:                        22px;
+@navbar-brand-color:                            #fff;
+@navbar-brand-hover-color:                      #fff;
+
+@navbar-nav-color:                              #fff;
+@navbar-nav-font-size:                          16px;
+@navbar-nav-padding-horizontal:                 25px;
+
+@navbar-nav-hover-background:                   #fff;
+@navbar-nav-hover-color:                        #191919;
+
+/* ========================================================================
+   Component: Navbar
+ ========================================================================== */
+
+.jv-navbar {
+  background: @navbar-background;
+  color: @navbar-color;
+  line-height: @navbar-height;
+}
+
+.jv-navbar:before,
+.jv-navbar:after {
+  content: " ";
+  display: table;
+}
+
+.jv-navbar:after { clear: both; }
+
+/* Sub-object: jv-navbar-brand
+ ========================================================================== */
+
+.jv-navbar-brand {
+  float: left;
+  font-size: @navbar-brand-font-size;
+  color: @navbar-brand-color;
+  height: @navbar-height;
+}
+
+.jv-navbar-brand:hover {
+  color: @navbar-brand-hover-color;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Sub-object: jv-navbar-nav
+ ========================================================================== */
+
+.jv-navbar-nav {
+  float:left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.jv-navbar-nav > li {
+  float:left;
+}
+
+.jv-navbar-nav > li > a {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  height: @navbar-height;
+  color: @navbar-nav-color;
+  font-size: @navbar-nav-font-size;
+  padding: 0 @navbar-nav-padding-horizontal;
+}
+
+.jv-navbar-nav > li > a:hover {
+  background: @navbar-nav-hover-background;
+  color: @navbar-nav-hover-color;
+  border-bottom: @global-border-bottom-width solid @navbar-nav-hover-color;
+}
+
