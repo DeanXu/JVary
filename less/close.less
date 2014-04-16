@@ -1,0 +1,49 @@
+// Name:            Close
+// Description:     Defines styles for a close button
+//
+// Component:       jv-close
+//
+// Used by:         Alert
+//                  Modal
+//
+// ========================================================================
+
+// Variables
+// ========================================================================
+
+@close-size:                                    20px;
+
+
+/* ========================================================================
+   Component: Close
+ ========================================================================== */
+
+.jv-close {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  display: inline-block;
+  width: @close-size;
+  line-height: @close-size;
+  text-align: center;
+  color: inherit;
+  opacity: 0.3;
+  padding: 0;
+  border: 0;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+.jv-close:after {
+  display: block;
+  content: "\f00d";
+  font-family: FontAwesome;
+}
+
+.jv-close:hover,
+.jv-close:focus {
+  opacity: 0.5;
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}

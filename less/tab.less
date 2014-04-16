@@ -57,6 +57,7 @@
     border: 1px solid transparent;
     border-bottom-width: 0;
     color: @tab-color;
+    text-align: center;
     text-decoration: none;
 }
 
@@ -79,16 +80,11 @@
 
 .jv-tab-center { border-bottom: 1px solid @tab-border-color; }
 
-.jv-tab-center-bottom {
-    border-bottom: none;
-    border-top: 1px solid @tab-border-color;
-}
-
 .jv-tab-center:before,
 .jv-tab-center:after {
     content: " ";
     display: table;
-}  
+}
 
 .jv-tab-center:after { clear: both; }
 
@@ -102,19 +98,9 @@
 .jv-tab-center .jv-tab > li {
     position: relative;
     left: -50%;
-}  
+}
 
 .jv-tab-center .jv-tab > li > a { text-align: center; }
-
-
-
-/* Modifier: jv-tab-grid
- ========================================================================== */
-
-.jv-tab-grid > li > a {
-    text-align: center;
-    .hook-tab-grid;
-}
 
 .hook-tab-misc;
 
